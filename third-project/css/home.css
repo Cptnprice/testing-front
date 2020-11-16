@@ -1,5 +1,6 @@
 body {
   margin: 0 5%;
+  font-family: sans-serif;
 }
 
 #header {
@@ -21,7 +22,65 @@ body {
   padding-left: 10%;
 }
 
+#nav-bar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#content {
+  text-align: center;
+}
+
+#email {
+  display: block;
+  margin: 1% auto;
+  padding: 5px;
+}
+
+#submit {
+  padding: 10px;
+  background-color: #445ebb;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  margin-bottom: 1%;
+}
+
 img {
     width: 50px;
     height: 50px;
+}
+
+.each {
+  display: flex;
+  align-items: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.description h2 {
+  margin-bottom: 0;
+}
+
+.each p {
+  text-align: left;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  width: 20vw;
+  margin-right: 5%;
+  color: #3c8ec3;
+}
+
+#video {
+  margin-top: 5%;
+  width: 100%;
+  max-width: 560px;
 }
