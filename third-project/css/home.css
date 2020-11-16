@@ -1,5 +1,5 @@
 body {
-  margin: 0 5%;
+  margin: 1% 5% 0% 5%;
   font-family: sans-serif;
 }
 
@@ -9,7 +9,7 @@ body {
 }
 
 #nav-bar {
-  width: 35%;
+  width: 55%;
   text-align: right;
 }
 
@@ -65,6 +65,7 @@ img {
 
 .description h2 {
   margin-bottom: 0;
+  text-align: left;
 }
 
 .each p {
@@ -74,9 +75,12 @@ img {
 .icon {
   display: flex;
   justify-content: center;
-  width: 20vw;
   margin-right: 5%;
   color: #3c8ec3;
+}
+
+.icon i {
+  width: 60px;
 }
 
 #video {
@@ -114,8 +118,7 @@ img {
   border: none;
   border-radius: 2px;
   cursor: pointer;
-  width: 20%;
-  max-width: 80px;
+  width: 80px;
   margin-bottom: 5%;
 }
 
@@ -143,4 +146,51 @@ footer ul li a {
 
 footer span {
   color: #6e7e7e; 
+}
+
+@media(max-width: 685px) {
+
+  #nav-bar ul {
+    margin: 0;
+  }
+  
+  #nav-bar ul li {
+    display: block;
+    margin-top: 5px;
+  }
+
+  #nav-bar ul li:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media(max-width: 1120px) {
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .each-pricing {
+    width: 50%;
+  }
+}
+
+@media(max-width: 460px) {
+  #header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #nav-bar {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  #nav-bar ul li {
+    padding-left: 0px;
+  }
+
+  .icon {
+    display: none;
+  }
 }
