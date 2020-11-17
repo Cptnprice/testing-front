@@ -5,11 +5,12 @@ body {
 }
 
 #main-doc p {
+    padding-right: 2vw;
     color: #595e6c;
 }
 
 article > p {
-    padding-left: 25px;
+    padding-left: 2vw;
 }
 
 header {
@@ -34,6 +35,8 @@ header {
 #navbar ul {
     list-style-type: none;
     padding-left: 0px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #navbar ul li {
@@ -78,4 +81,37 @@ header {
 #While_statement article code, #Function_declarations article code {
     padding-bottom: 0px;
     line-height: normal;
+}
+
+@media(max-width: 1140px) {
+
+    #navbar ul {
+        border: 1px solid #828798;
+        height: 200px;
+    }
+
+    #navbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        max-height: 260px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #828798;
+    }
+
+    #main-doc {
+        width: 100%;
+        padding-left: 15px; 
+        margin-top: 280px;
+    }
+}
+
+@media(max-width: 490px) {
+    #main-doc article code {
+        font-size: 10px;
+        width: max-content;
+    }
 }
