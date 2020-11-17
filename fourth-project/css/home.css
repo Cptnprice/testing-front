@@ -4,8 +4,20 @@ body {
     margin: 0;
 }
 
+#main-doc p {
+    color: #595e6c;
+}
+
+article > p {
+    padding-left: 25px;
+}
+
 header {
     font-size: 25px;
+    padding-top: 25px;
+}
+
+#navbar header {
     padding-left: 25px;
     padding-top: 15px;
 }
@@ -39,4 +51,31 @@ header {
 #main-doc {
     width: 75%;
     padding-left: 30%;
+}
+
+#main-doc ul {
+    padding-left: 80px;
+}
+
+#main-doc ul li::marker {
+    color: #4f5360;
+}
+
+#main-doc article code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-wrap: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #dadbe0;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#While_statement article code, #Function_declarations article code {
+    padding-bottom: 0px;
+    line-height: normal;
 }
