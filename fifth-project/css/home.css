@@ -72,7 +72,7 @@ body {
 .projects a {
     background-color: #594bc7;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .project-img {
@@ -85,4 +85,40 @@ body {
     color: white;
     padding: 10px;
     background-color: #594bc7;
+}
+
+#contact {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e2373;
+}
+
+#contact p {
+    color: #cfd6d3;
+}
+
+#contact h2 {
+    margin: 0;
+    font-size: 55px;
+    color: white;
+}
+
+.contact-section-header {
+    text-align: center;
+}
+
+.contact-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-links a {
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
 }
