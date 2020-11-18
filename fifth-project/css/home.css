@@ -56,7 +56,9 @@ body {
 }
 
 #projects h2 {
-    margin-top: 0px;
+    max-width: 500px;
+    border-bottom: 1px solid white;
+    margin: 0 auto 20px auto;
     padding-top: 25px;
     color: white;
 }
