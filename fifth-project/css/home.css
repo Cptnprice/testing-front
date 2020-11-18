@@ -51,11 +51,12 @@ body {
 
 #projects {
     text-align: center;
+    padding: 5% 0;
     background-color: #7a857c;
 }
 
 #projects h2 {
-    margin: 0;
+    margin-top: 0px;
     padding-top: 25px;
     color: white;
 }
@@ -65,7 +66,7 @@ body {
     grid-template-columns: repeat(3, minmax(100px, 350px));
     grid-gap: 15px;
     justify-content: center;
-    padding: 5% 0;
+    margin-bottom: 5%;
 }
 
 .projects a {
@@ -77,4 +78,11 @@ body {
 .project-img {
     height: 230px;
     width: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    background-color: #594bc7;
 }
