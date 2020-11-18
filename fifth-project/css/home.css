@@ -88,7 +88,7 @@ body {
 }
 
 #contact {
-    height: 80vh;
+    height: 83vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -121,4 +121,12 @@ body {
     color: white;
     padding: 1rem 2rem;
     text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1e2373;
+    border-top: 3px solid #dc2e1f;
+    color: white;
 }
