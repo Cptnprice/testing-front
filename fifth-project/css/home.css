@@ -51,7 +51,7 @@ body {
 
 #projects {
     text-align: center;
-    padding: 5% 0;
+    padding: 5% 1rem;
     background-color: #7a857c;
 }
 
@@ -103,7 +103,7 @@ body {
 
 #contact h2 {
     margin: 0;
-    font-size: 55px;
+    font-size: 50px;
     color: white;
 }
 
@@ -132,7 +132,18 @@ footer {
     color: white;
 }
 
+@media(max-width: 920px) {
+    .projects {
+        grid-template-columns: repeat(2, minmax(100px, 400px));
+    }
+}
+
 @media(max-width: 680px) {
+
+    .projects {
+        grid-template-columns: repeat(1, minmax(100px, 500px));
+    }
+
     #navbar {
         justify-content: center;
     }
@@ -145,5 +156,49 @@ footer {
 
     #navbar ul li {
         padding: 0;
+    }
+
+    #welcome-section h1 {
+        font-size: 45px;
+    }
+
+    #welcome-section p {
+        font-size: 25px;
+    }
+
+    #contact h2 {
+        font-size: 40px;
+    }
+}
+
+@media(max-width: 515px) {
+    #welcome-section h1 {
+        font-size: 35px;
+    }
+
+    #welcome-section p {
+        font-size: 20px;
+    }
+
+    #contact h2 {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 400px) {
+    #welcome-section h1 {
+        font-size: 25px;
+    }
+
+    #welcome-section p {
+        font-size: 15px;
+    }
+
+    #contact h2 {
+        font-size: 20px;
+    }
+
+    #contact p {
+        font-size: 15px;
     }
 }
