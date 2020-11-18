@@ -85,6 +85,21 @@ body {
     color: white;
     padding: 10px;
     background-color: #594bc7;
+    transition: background 0.3s ease-out;
+}
+
+.btn > i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+
+.btn:hover {
+    background-color: #dc2e1f;
+}
+
+.btn:hover > i {
+    transform: translateX(2px);
 }
 
 #contact {
