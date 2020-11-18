@@ -49,7 +49,32 @@ body {
     margin: 0;
 }
 
-img {
-    height: 100px;
-    width: 100px;
+#projects {
+    text-align: center;
+    background-color: #7a857c;
+}
+
+#projects h2 {
+    margin: 0;
+    padding-top: 25px;
+    color: white;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 350px));
+    grid-gap: 15px;
+    justify-content: center;
+    padding: 5% 0;
+}
+
+.projects a {
+    background-color: #594bc7;
+    text-decoration: none;
+    color: black;
+}
+
+.project-img {
+    height: 230px;
+    width: 100%;
 }
