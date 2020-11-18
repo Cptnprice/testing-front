@@ -16,7 +16,7 @@ body {
 #navbar ul {
     display: flex;
     list-style-type: none;
-    padding-right: 15%;
+    padding-right: 20%;
 }
 
 #navbar ul li {
@@ -115,6 +115,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .contact-links a {
@@ -129,4 +130,20 @@ footer {
     background-color: #1e2373;
     border-top: 3px solid #dc2e1f;
     color: white;
+}
+
+@media(max-width: 680px) {
+    #navbar {
+        justify-content: center;
+    }
+
+    #navbar ul {
+        width: 60%;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+
+    #navbar ul li {
+        padding: 0;
+    }
 }
