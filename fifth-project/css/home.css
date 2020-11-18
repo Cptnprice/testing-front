@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #dc2e1f;
+}
+
+#navbar ul {
+    display: flex;
+    list-style-type: none;
+    padding-right: 15%;
+}
+
+#navbar ul li {
+    padding-left: 25%;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3a3d39;
+}
+
+#welcome-section h1 {
+    color: white;
+    font-size: 55px;
+    margin-top: 0px;
+}
+
+#welcome-section p {
+    color: #df2e1f;
+    font-size: 35px;
+    margin: 0;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
