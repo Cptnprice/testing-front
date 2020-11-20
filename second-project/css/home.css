@@ -1,70 +1,59 @@
 body {
-    text-align: center;
-    background-color: #f2fcfd;
-    font-family: sans-serif;
-  }
-  
-  #survey-form {
-    padding: 15px;
-  }
-  
-  .form-group {
-    width: 55%;
-    max-width: 350px;
-    margin: 0 auto;
-  }
-  
-  .label-class {
-    display: block;
-    width: 100%;
-    text-align: left;
-    margin-top: 25px;
-    margin-bottom: 5px;
-  }
-  
-  .margin-top-none {
-    margin-top: 0px;
-  }
-  
-  input[type="radio"], input[type="checkbox"] {
-    margin-left: 0px;
-  }
-  
-  .form-control {
-    display: block;
-    width: 100%;
-    border: 1px solid #adb2ae;
-    border-radius: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  .form-control:focus {
-    border-color: blue;
-  }
-  
-  #dropdown {
-    display: block;
-    width: 100%;
-    border: 1px solid #adb2ae;
-    background-color: #ffffff;
-    border-radius: 5px;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-  
-  #dropdown:focus {
-    border-color: blue;
-  }
-  
-  #comments {
-    border-radius: 0px;
-  }
-  
-  #submit {
-    background-color: lightskyblue;
+  text-align: center;
+  background-color: #f2fcfd;
+  font-family: sans-serif; }
+
+#survey-form {
+  padding: 15px; }
+
+.form-group {
+  width: 55%;
+  max-width: 350px;
+  margin: 0 auto; }
+
+.label-class {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-top: 25px;
+  margin-bottom: 5px; }
+
+.margin-top-none {
+  margin-top: 0px; }
+
+input[type="radio"], input[type="checkbox"] {
+  margin-left: 0px; }
+
+.form-control {
+  display: block;
+  width: 100%;
+  border: 1px solid #adb2ae;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box; }
+
+.form-control:focus {
+  border-color: blue; }
+
+#dropdown {
+  display: block;
+  width: 100%;
+  border: 1px solid #adb2ae;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box; }
+
+#dropdown:focus {
+  border-color: blue; }
+
+#comments {
+  border-radius: 0px; }
+
+#submit {
+  background-color: lightskyblue;
   /*   color: white; */
-    border-radius: 0px;
-    margin-top: 2%;
-  }
-  
+  border-radius: 0px;
+  margin-top: 2%; }
+
+/*# sourceMappingURL=home.css.map */
