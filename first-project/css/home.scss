@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: "sans-serif";
+    background-color: lightyellow;
+  }
+  
+  #title {
+    color: #718E7A;
+  }
+  
+  #img-div {
+    width: 70%;
+    margin: 0 auto;
+  }
+  
+  #image {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  #img-caption {
+    font-size: 14px;
+  }
+  
+  #information {
+    margin-top: 5%;
+  }
+  
+  #tribute-info {
+    text-align: left;
+    line-height: 1.5;
+  }
+  
+  #tribute-link {
+    text-decoration: none;
+  }
+  
+  #tribute-link:visited {
+    color: #4e9fb1;
+  }
