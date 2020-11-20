@@ -17,10 +17,15 @@ body {
     display: flex;
     list-style-type: none;
     padding-right: 20%;
+    margin: 0;
 }
 
 #navbar ul li {
-    padding-left: 25%;
+    padding: 16px 12.25%;
+}
+
+#navbar ul li:hover {
+    background-color: #7d78d1;
 }
 
 #navbar ul li a {
