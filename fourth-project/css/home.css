@@ -1,70 +1,50 @@
 body {
-    display: flex;
-    font-family: sans-serif;
-    margin: 0;
-}
-
-#main-doc p {
-    padding-right: 2vw;
-    color: #595e6c;
-}
+  display: flex;
+  font-family: sans-serif;
+  margin: 0; }
 
 article > p {
-    padding-left: 2vw;
-}
+  padding-left: 2vw; }
 
 header {
-    font-size: 25px;
-    padding-top: 25px;
-}
-
-#navbar header {
-    padding-left: 25px;
-    padding-top: 15px;
-}
+  font-size: 25px;
+  padding-top: 25px; }
 
 #navbar {
-    width: 25%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    border-right: 3px solid #828798;
-}
-
-#navbar ul {
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-right: 3px solid #828798; }
+  #navbar header {
+    padding-left: 25px;
+    padding-top: 15px; }
+  #navbar ul {
     list-style-type: none;
     padding-left: 0px;
     overflow-y: auto;
-    overflow-x: hidden;
-}
-
-#navbar ul li {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-top: 1px solid black;
-}
-
-#navbar ul li a {
-    text-decoration: none;
-    color: #9ca0ad;
-    padding-left: 25px;
-}
+    overflow-x: hidden; }
+    #navbar ul li {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-top: 1px solid black; }
+      #navbar ul li a {
+        text-decoration: none;
+        color: #9ca0ad;
+        padding-left: 25px; }
 
 #main-doc {
-    width: 75%;
-    padding-left: 30%;
-}
-
-#main-doc ul {
-    padding-left: 80px;
-}
-
-#main-doc ul li::marker {
-    color: #4f5360;
-}
-
-#main-doc article code {
+  width: 75%;
+  padding-left: 30%; }
+  #main-doc p {
+    padding-right: 2vw;
+    color: #595e6c; }
+  #main-doc ul {
+    padding-left: 80px; }
+    #main-doc ul li::marker {
+      color: #4f5360; }
+  #main-doc article code {
     display: block;
     text-align: left;
     white-space: pre;
@@ -75,43 +55,34 @@ header {
     background-color: #dadbe0;
     padding: 15px;
     margin: 10px;
-    border-radius: 5px;
-}
+    border-radius: 5px; }
 
 #While_statement article code, #Function_declarations article code {
-    padding-bottom: 0px;
-    line-height: normal;
-}
+  padding-bottom: 0px;
+  line-height: normal; }
 
-@media(max-width: 1140px) {
-
+@media (max-width: 1140px) {
+  #navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    max-height: 260px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #828798; }
     #navbar ul {
-        border: 1px solid #828798;
-        height: 200px;
-    }
+      border: 1px solid #828798;
+      height: 200px; }
 
-    #navbar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        max-height: 260px;
-        width: 100%;
-        border: none;
-        border-bottom: 2px solid #828798;
-    }
+  #main-doc {
+    width: 100%;
+    padding-left: 15px;
+    margin-top: 280px; } }
+@media (max-width: 490px) {
+  #main-doc article code {
+    font-size: 10px;
+    width: max-content; } }
 
-    #main-doc {
-        width: 100%;
-        padding-left: 15px; 
-        margin-top: 280px;
-    }
-}
-
-@media(max-width: 490px) {
-    #main-doc article code {
-        font-size: 10px;
-        width: max-content;
-    }
-}
+/*# sourceMappingURL=home.css.map */
