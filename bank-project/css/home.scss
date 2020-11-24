@@ -1,3 +1,47 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.entry-block {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-left: 5%
+}
+
+.back-button {
+    align-self: center;
+
+    .left-arrow {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-left: 2px solid #060405;
+        border-bottom: 2px solid #060405;
+        transform: rotate(45deg);
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 12px;
+    }
+}
+
+.bank-logo {
+    max-width: 100%;
+    height: auto;
+}
+
+.order-details p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+}
+
 #mastercard {
     background-image: url("../img/mastercard-background.svg");
     background-color: #D84A5A;
