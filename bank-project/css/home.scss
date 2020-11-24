@@ -88,6 +88,38 @@ body {
     }
 }
 
+.each-card {
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid #7FCDFA;
+    border-radius: 10px;
+    margin-top: 1%;
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+
+    img {
+        width: 44px;
+        align-self: center;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 14px;
+
+        &:first-of-type {
+            line-height: 19px;
+        }
+
+        &:last-child {
+            margin: auto 0;
+            font-size: 12px;
+        }
+    }
+}
+
 #mastercard {
     background-image: url("../img/mastercard-background.svg");
     background-color: #D84A5A;
