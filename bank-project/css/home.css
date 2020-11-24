@@ -33,6 +33,38 @@ body {
   font-size: 12px;
   line-height: 14px; }
 
+.balance-payment-type {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%; }
+  .balance-payment-type .balance {
+    width: 30%;
+    text-align: right;
+    padding-left: 5%; }
+    .balance-payment-type .balance p {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 14px;
+      opacity: 0.5;
+      margin-top: 0px; }
+    .balance-payment-type .balance span {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 14px;
+      opacity: 1; }
+  .balance-payment-type .payment-type {
+    width: 70%;
+    padding-left: 7%; }
+    .balance-payment-type .payment-type ul {
+      margin-top: 0px; }
+      .balance-payment-type .payment-type ul li {
+        display: inline;
+        padding-left: 3rem;
+        font-size: 12px;
+        line-height: 14px; }
+        .balance-payment-type .payment-type ul li:first-child {
+          padding-left: 0; }
+
 #mastercard {
   background-image: url("../img/mastercard-background.svg");
   background-color: #D84A5A;
