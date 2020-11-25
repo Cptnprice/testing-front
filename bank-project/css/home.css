@@ -235,7 +235,8 @@ body {
       cursor: pointer; }
 
 .terms-information {
-  padding-left: 5%; }
+  padding-left: 5%;
+  margin-top: 3%; }
   .terms-information p {
     font-style: normal;
     font-weight: normal;
