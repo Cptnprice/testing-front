@@ -66,7 +66,7 @@ body {
           padding-left: 0; }
 
 .each-card {
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: space-evenly;
   border: 1px solid #7FCDFA;
@@ -87,7 +87,7 @@ body {
       font-size: 12px; }
 
 .add-new-card {
-  width: 30%;
+  width: 20%;
   display: inline-block;
   margin-top: 1%;
   text-align: center;
@@ -97,10 +97,63 @@ body {
   text-decoration: none;
   opacity: 0.5; }
 
+.card {
+  width: 340px;
+  border-radius: 8px; }
+
 #mastercard {
   background-image: url("../img/mastercard-background.svg");
   background-color: #D84A5A;
   background-repeat: no-repeat; }
+  #mastercard .card-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px; }
+    #mastercard .card-top .title {
+      display: flex; }
+      #mastercard .card-top .title img:nth-of-type(2) {
+        margin-left: 5%; }
+  #mastercard .card-middle {
+    display: flex;
+    justify-content: space-around; }
+    #mastercard .card-middle p {
+      margin: 0;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      color: white; }
+  #mastercard .card-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px; }
+    #mastercard .card-bottom .expire-date p {
+      font-style: normal;
+      font-weight: normal;
+      color: white; }
+      #mastercard .card-bottom .expire-date p:first-child {
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 0px; }
+      #mastercard .card-bottom .expire-date p:nth-of-type(2) {
+        font-size: 14px;
+        line-height: 17px;
+        margin-bottom: 0px; }
+    #mastercard .card-bottom .card-type {
+      width: 25%;
+      height: max-content;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+      border-radius: 25px;
+      background: white;
+      opacity: 0.7; }
+      #mastercard .card-bottom .card-type p {
+        margin: 0; }
 
 #visa {
   background-image: url("../img/visa-background.svg");
