@@ -293,5 +293,46 @@ body {
 
     .pay {
         width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            margin-left: 1%;
+            margin-right: 5%;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        button {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 18px;
+            color: #6A6A6A;
+            background: linear-gradient(360deg, #67C870 0%, #81E79B 99.99%, rgba(103, 200, 112, 0) 100%);
+            border-radius: 8px;
+            padding: 10px 55px;
+            border: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.terms-information {
+    padding-left: 5%;
+
+    p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: uppercase;
+    }
+
+    span {
+        font-weight: 600;
     }
 }
