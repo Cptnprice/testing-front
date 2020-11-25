@@ -137,80 +137,80 @@ body {
     border-radius: 8px;
 }
 
-#mastercard {
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
 
-    .card-top {
+    .title {
         display: flex;
-        justify-content: space-between;
-        padding-top: 25px;
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 50px;
+    }
+}
 
-        .title {
-            display: flex;
+.card-middle {
+    display: flex;
+    justify-content: space-around;
 
-            img {
-                &:nth-of-type(2) {
-                    margin-left: 5%;
-                }
+    p {
+        margin: 0;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        color: white;
+    }
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 20px;
+
+    .expire-date {
+        p {
+            font-style: normal;
+            font-weight: normal;
+            color: white;
+
+            &:first-child {
+                font-size: 12px;
+                line-height: 14px;
+                margin-top: 0px;
+            }
+
+            &:nth-of-type(2) {
+                font-size: 14px;
+                line-height: 17px;
+                margin-bottom: 0px;
             }
         }
     }
 
-    .card-middle {
+    .card-type {
+        width: 25%;
+        height: max-content;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 25px;
+        background: white;
+        opacity: 0.7;
 
         p {
             margin: 0;
-            font-style: normal;
-            font-weight: 600;
-            font-size: 24px;
-            line-height: 29px;
-            color: white;
         }
     }
+}
 
-    .card-bottom {
-        display: flex;
-        justify-content: space-between;
-        padding: 25px 20px;
+#mastercard {
 
-        .expire-date {
-            p {
-                font-style: normal;
-                font-weight: normal;
-                color: white;
-
-                &:first-child {
-                    font-size: 12px;
-                    line-height: 14px;
-                    margin-top: 0px;
-                }
-
-                &:nth-of-type(2) {
-                    font-size: 14px;
-                    line-height: 17px;
-                    margin-bottom: 0px;
-                }
-            }
-        }
-
-        .card-type {
-            width: 25%;
-            height: max-content;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px 15px;
-            border-radius: 25px;
-            background: white;
-            opacity: 0.7;
-
-            p {
-                margin: 0;
-            }
+    .card-top .title img{
+        &:nth-of-type(2) {
+            margin-left: 5%;
         }
     }
     
