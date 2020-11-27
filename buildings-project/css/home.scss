@@ -21,8 +21,39 @@ header {
             padding-left: 2vw;
     
             a {
+                font-family: 'Roboto', sans-serif;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 18px;
+                line-height: 21px;
                 text-decoration: none;
                 color: white;
+            }
+        }
+    }
+
+    .header-middle-container {
+        margin-top: 175px;
+
+        h1 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 82px;
+            color: white;
+        }
+
+        p {
+            font-family: 'Nunito Sans', sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 29px;
+            line-height: 40px;
+            color: white;
+
+            &:first-of-type {
+                margin-top: 20px;
             }
         }
     }
