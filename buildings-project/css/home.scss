@@ -35,6 +35,7 @@ header {
 
     .header-middle-container {
         margin-top: 175px;
+        margin-bottom: 7%;
 
         h1 {
             font-family: 'Nunito Sans', sans-serif;
@@ -60,11 +61,16 @@ header {
     }
 
     .header-bottom-container {
-        width: 80%;
+        width: max-content;
+        display: grid;
+        grid-template-columns: 203px 179px 179px 179px 247px;
+        grid-template-rows: 61px 61px;
+        grid-column-gap: 27px;
+        grid-row-gap: 11px;
+        padding: 20px 90px;
         background: white;
 
         .select-container {
-            width: 150px;
             position: relative;
             background-color: #FFF0CB;
 
@@ -73,7 +79,8 @@ header {
                 width: 15px;
                 height: 15px;
                 position: absolute;
-                top: 18px;
+                top: 50%;
+                transform: translateY(-50%);
                 right: 10px;
                 z-index: 0;
                 content: "";
@@ -87,9 +94,27 @@ header {
             position: relative;
             appearance: none;
             background-color: transparent;
-            padding: 15px;
+            padding: 20px;
             border: none;
             z-index: 1;
+        }
+
+        textarea {
+            padding: 10px;
+            grid-column: 2/6;
+            border: none;
+            background-color: #FFF0CB;
+        }
+
+        button {
+            border: none;
+            background-color: #FFC839;
+            font-family: "Roboto", sans-serif;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 23px;
+            line-height: 27px;
+            color: black;
         }
     }
 }
