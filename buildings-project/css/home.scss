@@ -192,6 +192,7 @@ main {
 
     .company-features {
         display: flex;
+        justify-content: space-between;
         margin-top: 100px;
 
         .features {
@@ -241,6 +242,17 @@ main {
                         }
                     }
                 }
+            }
+        }
+
+        .company-feature-image {
+            display: flex;
+            align-items: center;
+
+            .orange-background {
+                width: 75px;
+                height: 430px;
+                background-color: #FFC839;
             }
         }
     }

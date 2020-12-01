@@ -144,6 +144,7 @@ main {
             box-shadow: 1px 4px 4px #E0A712; }
   main .company-features {
     display: flex;
+    justify-content: space-between;
     margin-top: 100px; }
     main .company-features .features {
       display: flex;
@@ -178,5 +179,12 @@ main {
             main .company-features .features .company-feature .company-feature-description p:nth-of-type(2) {
               font-size: 21px;
               line-height: 29px; }
+    main .company-features .company-feature-image {
+      display: flex;
+      align-items: center; }
+      main .company-features .company-feature-image .orange-background {
+        width: 75px;
+        height: 430px;
+        background-color: #FFC839; }
 
 /*# sourceMappingURL=home.css.map */
