@@ -186,5 +186,45 @@ main {
         width: 75px;
         height: 430px;
         background-color: #FFC839; }
+  main .contact {
+    margin-top: 100px;
+    padding: 130px 290px 105px 165px;
+    background-color: #FFF5DA; }
+    main .contact p {
+      display: inline-block;
+      font-family: "Nunito Sans", sans-serif;
+      font-style: normal; }
+      main .contact p:first-child {
+        margin-bottom: 15px;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 49px;
+        color: #323232; }
+      main .contact p:nth-of-type(2) {
+        margin-bottom: 15px;
+        font-weight: normal;
+        font-size: 29px;
+        line-height: 40px;
+        color: #646464; }
+    main .contact form {
+      display: flex; }
+      main .contact form input[type="text"] {
+        width: 25%;
+        max-width: 708px;
+        margin-right: 15px;
+        padding: 20px;
+        border: 1px solid black; }
+      main .contact form input[type="submit"] {
+        width: 150px;
+        padding: 10px;
+        border: none;
+        color: black;
+        background-color: #FFC839;
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 29px;
+        line-height: 40px;
+        cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */
