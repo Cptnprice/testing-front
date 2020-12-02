@@ -317,4 +317,36 @@ main {
       main .company-collection .second .second-description h3 {
         margin-top: 35px; }
 
+footer {
+  margin-top: 110px;
+  padding: 45px 75px 50px 100px;
+  background-color: #093A7A; }
+  footer ul li {
+    display: inline; }
+    footer ul li a {
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: #CACACA; }
+  footer .locations > p {
+    font-family: "Nunito Sans", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    color: white; }
+  footer .locations .location > p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: #E6E5E5; }
+  footer .contact-information ul li a {
+    font-size: 11px;
+    line-height: 13px; }
+
 /*# sourceMappingURL=home.css.map */
