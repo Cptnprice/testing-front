@@ -243,5 +243,46 @@ main {
       grid-template-rows: repeat(2, 406px);
       grid-column-gap: 25px;
       grid-row-gap: 20px; }
+  main .company-collection {
+    margin-top: 110px; }
+    main .company-collection > p {
+      margin-bottom: 20px;
+      font-family: "Nunito Sans", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 49px;
+      color: #323232; }
+    main .company-collection .first {
+      display: flex; }
+      main .company-collection .first .first-description {
+        margin-top: 25px; }
+        main .company-collection .first .first-description p {
+          font-family: "Nunito Sans", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 27px;
+          color: #606060; }
+          main .company-collection .first .first-description p:first-child {
+            margin-bottom: 15px; }
+        main .company-collection .first .first-description button {
+          margin-top: 30px;
+          padding: 10px 35px;
+          background-color: #FFC839;
+          border: none;
+          filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.16));
+          font-family: "Nunito Sans", sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 29px;
+          line-height: 40px;
+          color: black; }
+      main .company-collection .first .first-related-images {
+        display: flex; }
+        main .company-collection .first .first-related-images img:not(:first-child) {
+          margin-left: 15px; }
+        main .company-collection .first .first-related-images img:first-child {
+          margin-left: 55px; }
 
 /*# sourceMappingURL=home.css.map */

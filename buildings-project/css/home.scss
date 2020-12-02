@@ -333,4 +333,67 @@ main {
             grid-row-gap: 20px;
         }
     }
+
+    .company-collection {
+        margin-top: 110px;
+
+        > p {
+            margin-bottom: 20px;
+            font-family: "Nunito Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 49px;
+            color: #323232;
+        }
+
+        .first {
+            display: flex;
+
+            .first-description {
+                margin-top: 25px;
+                p {
+                    font-family: "Nunito Sans", sans-serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 27px;
+                    color: #606060;
+
+                    &:first-child {
+                        margin-bottom: 15px;
+                    }
+                }
+
+                button {
+                    margin-top: 30px;
+                    padding: 10px 35px;
+                    background-color: #FFC839;
+                    border: none;
+                    filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.16));
+                    font-family: "Nunito Sans", sans-serif;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 29px;
+                    line-height: 40px;
+                    color: black;
+                }
+            }
+
+            .first-related-images {
+                display: flex;
+
+                img {
+
+                    &:not(:first-child) {
+                        margin-left: 15px;
+                    }
+
+                    &:first-child {
+                        margin-left: 55px;
+                    }
+                }
+            }
+        }
+    }
 }
