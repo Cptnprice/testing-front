@@ -321,8 +321,20 @@ footer {
   margin-top: 110px;
   padding: 45px 75px 50px 100px;
   background-color: #093A7A; }
+  footer hr {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.16); }
+  footer .first-list ul {
+    display: flex;
+    justify-content: space-between; }
+  footer .first-list hr {
+    margin-top: 30px;
+    margin-bottom: 30px; }
   footer ul li {
-    display: inline; }
+    display: inline;
+    padding-right: 35px; }
+    footer ul li:last-child {
+      padding-right: 0px; }
     footer ul li a {
       text-decoration: none;
       font-family: "Roboto", sans-serif;
@@ -332,6 +344,7 @@ footer {
       line-height: 19px;
       color: #CACACA; }
   footer .locations > p {
+    margin-bottom: 35px;
     font-family: "Nunito Sans", sans-serif;
     font-style: normal;
     font-weight: 600;
@@ -339,14 +352,27 @@ footer {
     line-height: 33px;
     color: white; }
   footer .locations .location > p {
+    margin-top: 30px;
+    margin-bottom: 5px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
     color: #E6E5E5; }
-  footer .contact-information ul li a {
-    font-size: 11px;
-    line-height: 13px; }
+  footer .locations hr {
+    margin-top: 35px;
+    margin-bottom: 25px; }
+  footer .contact-information {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    footer .contact-information ul {
+      align-self: start; }
+      footer .contact-information ul li a {
+        font-size: 11px;
+        line-height: 13px; }
+    footer .contact-information .other-devices-links img:first-child {
+      padding-right: 50px; }
 
 /*# sourceMappingURL=home.css.map */
