@@ -310,4 +310,27 @@ main {
             }
         }
     }
+
+    .images-list {
+        margin-top: 120px;
+
+        p {
+            margin-bottom: 45px;
+            font-family: "Nunito Sans", sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 49px;
+            color: #323232;
+        }
+
+        .images-list-container {
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: repeat(4, 293px);
+            grid-template-rows: repeat(2, 406px);
+            grid-column-gap: 25px;
+            grid-row-gap: 20px;
+        }
+    }
 }
