@@ -254,8 +254,11 @@ main {
       line-height: 49px;
       color: #323232; }
     main .company-collection .first {
-      display: flex; }
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px; }
       main .company-collection .first .first-description {
+        max-width: 620px;
         margin-top: 25px; }
         main .company-collection .first .first-description p {
           font-family: "Nunito Sans", sans-serif;
@@ -282,7 +285,36 @@ main {
         display: flex; }
         main .company-collection .first .first-related-images img:not(:first-child) {
           margin-left: 15px; }
-        main .company-collection .first .first-related-images img:first-child {
-          margin-left: 55px; }
+    main .company-collection .second {
+      display: flex;
+      margin-top: 50px; }
+      main .company-collection .second .product-listing {
+        margin-top: 130px;
+        padding-right: 45px; }
+        main .company-collection .second .product-listing p {
+          font-family: "Nunito Sans", sans-serif;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 27px;
+          color: black; }
+      main .company-collection .second .second-description h2, main .company-collection .second .second-description h3, main .company-collection .second .second-description p {
+        font-family: "Nunito Sans", sans-serif;
+        font-style: normal;
+        font-weight: 600; }
+      main .company-collection .second .second-description h2 {
+        font-size: 36px;
+        line-height: 49px;
+        color: #323232; }
+      main .company-collection .second .second-description h3, main .company-collection .second .second-description p {
+        font-size: 24px;
+        line-height: 33px;
+        color: #4A4949; }
+      main .company-collection .second .second-description p {
+        margin-top: 25px; }
+        main .company-collection .second .second-description p:nth-of-type(1) {
+          margin-top: 30px; }
+      main .company-collection .second .second-description h3 {
+        margin-top: 35px; }
 
 /*# sourceMappingURL=home.css.map */
