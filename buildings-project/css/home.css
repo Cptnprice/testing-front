@@ -19,8 +19,6 @@ header {
       padding-left: 2vw; }
       header .header-top-container nav ul li a {
         font-family: 'Roboto', sans-serif;
-        font-style: normal;
-        font-weight: normal;
         font-size: 18px;
         line-height: 21px;
         text-decoration: none;
@@ -30,15 +28,12 @@ header {
     margin-bottom: 7%; }
     header .header-middle-container h1 {
       font-family: 'Nunito Sans', sans-serif;
-      font-style: normal;
       font-weight: bold;
       font-size: 60px;
       line-height: 82px;
       color: white; }
     header .header-middle-container p {
       font-family: 'Nunito Sans', sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 29px;
       line-height: 40px;
       color: white; }
@@ -85,8 +80,6 @@ header {
       border: none;
       background-color: #FFC839;
       font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 23px;
       line-height: 27px;
       color: black; }
@@ -130,7 +123,6 @@ main {
             transform: translate(-50%, -50%); }
         main .options .each-option .description p {
           font-family: "Nunito Sans", sans-serif;
-          font-style: normal;
           font-weight: bold;
           font-size: 14px;
           line-height: 19px; }
@@ -152,7 +144,6 @@ main {
       main .company-features .features h2 {
         margin-bottom: 65px;
         font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
         font-weight: 600;
         font-size: 36px;
         line-height: 49px;
@@ -169,8 +160,6 @@ main {
           justify-content: space-between; }
           main .company-features .features .company-feature .company-feature-description p {
             font-family: "Nunito Sans", sans-serif;
-            font-style: normal;
-            font-weight: normal;
             color: #4A4A4A; }
             main .company-features .features .company-feature .company-feature-description p:first-of-type {
               margin-top: 5px;
@@ -192,8 +181,7 @@ main {
     background-color: #FFF5DA; }
     main .contact p {
       display: inline-block;
-      font-family: "Nunito Sans", sans-serif;
-      font-style: normal; }
+      font-family: "Nunito Sans", sans-serif; }
       main .contact p:first-child {
         margin-bottom: 15px;
         font-weight: 600;
@@ -221,8 +209,6 @@ main {
         color: black;
         background-color: #FFC839;
         font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
-        font-weight: normal;
         font-size: 29px;
         line-height: 40px;
         cursor: pointer; }
@@ -231,7 +217,6 @@ main {
     main .images-list p {
       margin-bottom: 45px;
       font-family: "Nunito Sans", sans-serif;
-      font-style: normal;
       font-weight: 600;
       font-size: 36px;
       line-height: 49px;
@@ -248,7 +233,6 @@ main {
     main .company-collection > p {
       margin-bottom: 20px;
       font-family: "Nunito Sans", sans-serif;
-      font-style: normal;
       font-weight: 600;
       font-size: 36px;
       line-height: 49px;
@@ -262,7 +246,6 @@ main {
         margin-top: 25px; }
         main .company-collection .first .first-description p {
           font-family: "Nunito Sans", sans-serif;
-          font-style: normal;
           font-weight: 600;
           font-size: 20px;
           line-height: 27px;
@@ -276,8 +259,6 @@ main {
           border: none;
           filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.16));
           font-family: "Nunito Sans", sans-serif;
-          font-style: normal;
-          font-weight: normal;
           font-size: 29px;
           line-height: 40px;
           color: black; }
@@ -293,14 +274,12 @@ main {
         padding-right: 45px; }
         main .company-collection .second .product-listing p {
           font-family: "Nunito Sans", sans-serif;
-          font-style: normal;
           font-weight: 600;
           font-size: 20px;
           line-height: 27px;
           color: black; }
       main .company-collection .second .second-description h2, main .company-collection .second .second-description h3, main .company-collection .second .second-description p {
         font-family: "Nunito Sans", sans-serif;
-        font-style: normal;
         font-weight: 600; }
       main .company-collection .second .second-description h2 {
         font-size: 36px;
@@ -338,15 +317,12 @@ footer {
     footer ul li a {
       text-decoration: none;
       font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: normal;
       font-size: 16px;
       line-height: 19px;
       color: #CACACA; }
   footer .locations > p {
     margin-bottom: 35px;
     font-family: "Nunito Sans", sans-serif;
-    font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 33px;
@@ -355,8 +331,6 @@ footer {
     margin-top: 30px;
     margin-bottom: 5px;
     font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: normal;
     font-size: 20px;
     line-height: 23px;
     color: #E6E5E5; }

@@ -23,8 +23,6 @@ header {
     
             a {
                 font-family: 'Roboto', sans-serif;
-                font-style: normal;
-                font-weight: normal;
                 font-size: 18px;
                 line-height: 21px;
                 text-decoration: none;
@@ -39,7 +37,6 @@ header {
 
         h1 {
             font-family: 'Nunito Sans', sans-serif;
-            font-style: normal;
             font-weight: bold;
             font-size: 60px;
             line-height: 82px;
@@ -48,8 +45,6 @@ header {
 
         p {
             font-family: 'Nunito Sans', sans-serif;
-            font-style: normal;
-            font-weight: normal;
             font-size: 29px;
             line-height: 40px;
             color: white;
@@ -110,8 +105,6 @@ header {
             border: none;
             background-color: #FFC839;
             font-family: "Roboto", sans-serif;
-            font-style: normal;
-            font-weight: normal;
             font-size: 23px;
             line-height: 27px;
             color: black;
@@ -167,7 +160,6 @@ main {
 
                 p {
                     font-family: "Nunito Sans", sans-serif;
-                    font-style: normal;
                     font-weight: bold;
                     font-size: 14px;
                     line-height: 19px;
@@ -202,7 +194,6 @@ main {
             h2 {
                 margin-bottom: 65px;
                 font-family: "Nunito Sans", sans-serif;
-                font-style: normal;
                 font-weight: 600;
                 font-size: 36px;
                 line-height: 49px;
@@ -227,8 +218,6 @@ main {
 
                     p {
                         font-family: "Nunito Sans", sans-serif;
-                        font-style: normal;
-                        font-weight: normal;
                         color: #4A4A4A;
                         &:first-of-type {
                             margin-top: 5px;
@@ -265,7 +254,6 @@ main {
         p {
             display: inline-block;
             font-family: "Nunito Sans", sans-serif;
-            font-style: normal;
 
             &:first-child {
                 margin-bottom: 15px;
@@ -302,8 +290,6 @@ main {
                 color: black;
                 background-color: #FFC839;
                 font-family: "Nunito Sans", sans-serif;
-                font-style: normal;
-                font-weight: normal;
                 font-size: 29px;
                 line-height: 40px;
                 cursor: pointer;
@@ -317,7 +303,6 @@ main {
         p {
             margin-bottom: 45px;
             font-family: "Nunito Sans", sans-serif;
-            font-style: normal;
             font-weight: 600;
             font-size: 36px;
             line-height: 49px;
@@ -340,7 +325,6 @@ main {
         > p {
             margin-bottom: 20px;
             font-family: "Nunito Sans", sans-serif;
-            font-style: normal;
             font-weight: 600;
             font-size: 36px;
             line-height: 49px;
@@ -357,7 +341,6 @@ main {
                 margin-top: 25px;
                 p {
                     font-family: "Nunito Sans", sans-serif;
-                    font-style: normal;
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 27px;
@@ -375,8 +358,6 @@ main {
                     border: none;
                     filter: drop-shadow(0px 4px 22px rgba(0, 0, 0, 0.16));
                     font-family: "Nunito Sans", sans-serif;
-                    font-style: normal;
-                    font-weight: normal;
                     font-size: 29px;
                     line-height: 40px;
                     color: black;
@@ -405,7 +386,6 @@ main {
 
                 p {
                     font-family: "Nunito Sans", sans-serif;
-                    font-style: normal;
                     font-weight: 600;
                     font-size: 20px;
                     line-height: 27px;
@@ -416,7 +396,6 @@ main {
             .second-description {
                 h2, h3, p {
                     font-family: "Nunito Sans", sans-serif;
-                    font-style: normal;
                     font-weight: 600;
                 }
 
@@ -484,8 +463,6 @@ footer {
             a {
                 text-decoration: none;
                 font-family: "Roboto", sans-serif;
-                font-style: normal;
-                font-weight: normal;
                 font-size: 16px;
                 line-height: 19px;
                 color: #CACACA;
@@ -498,7 +475,6 @@ footer {
         > p {
             margin-bottom: 35px;
             font-family: "Nunito Sans", sans-serif;
-            font-style: normal;
             font-weight: 600;
             font-size: 24px;
             line-height: 33px;
@@ -511,8 +487,6 @@ footer {
                 margin-top: 30px;
                 margin-bottom: 5px;
                 font-family: "Roboto", sans-serif;
-                font-style: normal;
-                font-weight: normal;
                 font-size: 20px;
                 line-height: 23px;
                 color: #E6E5E5;
