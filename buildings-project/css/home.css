@@ -14,6 +14,8 @@ header {
     align-items: center;
     padding-top: 42px;
     padding-right: 245px; }
+    header .header-top-container .company-logo img {
+      cursor: pointer; }
     header .header-top-container nav ul li {
       display: inline;
       padding-left: 2vw; }
@@ -82,7 +84,8 @@ header {
       font-family: "Roboto", sans-serif;
       font-size: 23px;
       line-height: 27px;
-      color: black; }
+      color: black;
+      cursor: pointer; }
 
 main {
   padding-left: 100px;
@@ -261,7 +264,8 @@ main {
           font-family: "Nunito Sans", sans-serif;
           font-size: 29px;
           line-height: 40px;
-          color: black; }
+          color: black;
+          cursor: pointer; }
       main .company-collection .first .first-related-images {
         display: flex; }
         main .company-collection .first .first-related-images img:not(:first-child) {
@@ -314,12 +318,13 @@ footer {
     padding-right: 35px; }
     footer ul li:last-child {
       padding-right: 0px; }
-    footer ul li a {
-      text-decoration: none;
+    footer ul li a, footer ul li p {
       font-family: "Roboto", sans-serif;
       font-size: 16px;
       line-height: 19px;
       color: #CACACA; }
+    footer ul li a {
+      text-decoration: none; }
   footer .locations > p {
     margin-bottom: 35px;
     font-family: "Nunito Sans", sans-serif;
@@ -343,10 +348,14 @@ footer {
     align-items: center; }
     footer .contact-information ul {
       align-self: start; }
-      footer .contact-information ul li a {
+      footer .contact-information ul li a, footer .contact-information ul li p {
         font-size: 11px;
         line-height: 13px; }
-    footer .contact-information .other-devices-links img:first-child {
-      padding-right: 50px; }
+      footer .contact-information ul li p {
+        display: inline; }
+    footer .contact-information .other-devices-links img {
+      cursor: pointer; }
+      footer .contact-information .other-devices-links img:first-child {
+        padding-right: 50px; }
 
 /*# sourceMappingURL=home.css.map */

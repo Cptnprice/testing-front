@@ -16,6 +16,14 @@ header {
         align-items: center;
         padding-top: 42px;
         padding-right: 245px;
+
+        .company-logo {
+
+            img {
+
+                cursor: pointer;
+            }
+        }
     
         nav ul li {
             display: inline;
@@ -108,6 +116,7 @@ header {
             font-size: 23px;
             line-height: 27px;
             color: black;
+            cursor: pointer;
         }
     }
 }
@@ -361,6 +370,7 @@ main {
                     font-size: 29px;
                     line-height: 40px;
                     color: black;
+                    cursor: pointer;
                 }
             }
 
@@ -460,12 +470,15 @@ footer {
                 padding-right: 0px;
             }
 
-            a {
-                text-decoration: none;
+            a, p {
                 font-family: "Roboto", sans-serif;
                 font-size: 16px;
                 line-height: 19px;
                 color: #CACACA;
+            }
+
+            a {
+                text-decoration: none;
             }
         }
     }
@@ -509,9 +522,13 @@ footer {
 
             li {
 
-                a {
+                a, p {
                     font-size: 11px;
                     line-height: 13px;
+                }
+
+                p {
+                    display: inline;
                 }
             }
         }
@@ -519,6 +536,7 @@ footer {
         .other-devices-links {
 
             img {
+                cursor: pointer;
 
                 &:first-child {
                     padding-right: 50px;
