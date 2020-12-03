@@ -1,0 +1,116 @@
+header {
+    min-height: 865px;
+    padding-left: 100px;
+    background: linear-gradient(0.87deg, rgba(2, 55, 135, 0.9) 0.69%, rgba(81, 38, 174, 0.4736) 100.48%, rgba(38, 92, 174, 0.0102906) 100.49%, rgba(195, 195, 196, 0.00520833) 100.5%, #76A6EF 100.51%), url("../img/header_background.png");
+    background-size: 100%;
+
+    .header-top-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 42px;
+        padding-right: 245px;
+
+        .company-logo {
+
+            img {
+
+                cursor: pointer;
+            }
+        }
+    
+        nav ul li {
+            display: inline;
+            padding-left: 2vw;
+    
+            a {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                line-height: 21px;
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+
+    .header-middle-container {
+        margin-top: 175px;
+        margin-bottom: 7%;
+
+        h1 {
+            font-family: 'Nunito Sans', sans-serif;
+            font-weight: bold;
+            font-size: 60px;
+            line-height: 82px;
+            color: white;
+        }
+
+        p {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 29px;
+            line-height: 40px;
+            color: white;
+
+            &:first-of-type {
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .header-bottom-container {
+        width: max-content;
+        display: grid;
+        grid-template-columns: 203px 179px 179px 179px 247px;
+        grid-template-rows: 61px 61px;
+        grid-column-gap: 27px;
+        grid-row-gap: 11px;
+        padding: 20px 90px;
+        background: white;
+
+        .select-container {
+            position: relative;
+            background-color: #FFF0CB;
+
+            &::after {
+                display: block;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 10px;
+                z-index: 0;
+                content: "";
+                background-image: url("https://static.thenounproject.com/png/551749-200.png");
+                background-size: 100% 100%;
+            }
+        }
+
+        select {
+            width: 100%;
+            position: relative;
+            appearance: none;
+            background-color: transparent;
+            padding: 20px;
+            border: none;
+            z-index: 1;
+        }
+
+        textarea {
+            padding: 10px;
+            grid-column: 2/6;
+            border: none;
+            background-color: #FFF0CB;
+        }
+
+        button {
+            border: none;
+            background-color: #FFC839;
+            font-family: "Roboto", sans-serif;
+            font-size: 23px;
+            line-height: 27px;
+            color: black;
+            cursor: pointer;
+        }
+    }
+}

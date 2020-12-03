@@ -1,0 +1,108 @@
+footer {
+    margin-top: 110px;
+    padding: 45px 75px 50px 100px;
+    background-color: #093A7A;
+
+    hr {
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .first-list {
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        hr {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    ul {
+
+        li {
+            display: inline;
+            padding-right: 35px;
+
+            &:last-child {
+                padding-right: 0px;
+            }
+
+            a, p {
+                font-family: "Roboto", sans-serif;
+                font-size: 16px;
+                line-height: 19px;
+                color: #CACACA;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .locations {
+
+        > p {
+            margin-bottom: 35px;
+            font-family: "Nunito Sans", sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 33px;
+            color: white;
+        }
+
+        .location {
+
+            > p {
+                margin-top: 30px;
+                margin-bottom: 5px;
+                font-family: "Roboto", sans-serif;
+                font-size: 20px;
+                line-height: 23px;
+                color: #E6E5E5;
+            }
+        }
+
+        hr {
+            margin-top: 35px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .contact-information {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul {
+            align-self: start;
+
+            li {
+
+                a, p {
+                    font-size: 11px;
+                    line-height: 13px;
+                }
+
+                p {
+                    display: inline;
+                }
+            }
+        }
+
+        .other-devices-links {
+
+            img {
+                cursor: pointer;
+
+                &:first-child {
+                    padding-right: 50px;
+                }
+            }
+        }
+    }
+}
