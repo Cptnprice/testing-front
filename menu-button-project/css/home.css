@@ -20,32 +20,24 @@
       background-color: white;
       position: absolute;
       border-radius: 5px;
-      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3); }
-    .container .items .item-1 {
-      top: 0%;
-      left: 0%;
-      animation-name: rotate1;
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
       animation-duration: 2s;
       animation-iteration-count: infinite;
       animation-play-state: paused;
       animation-direction: alternate; }
+    .container .items .item-1 {
+      top: 0%;
+      left: 0%;
+      animation-name: rotate1; }
     .container .items .item-2 {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      animation-name: rotate2;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-play-state: paused;
-      animation-direction: alternate; }
+      animation-name: rotate2; }
     .container .items .item-3 {
       bottom: 0%;
       left: 0%;
-      animation-name: rotate3;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-play-state: paused;
-      animation-direction: alternate; }
+      animation-name: rotate3; }
     .container .items:hover .item-1, .container .items:hover .item-2, .container .items:hover .item-3 {
       animation-play-state: running; }
 
