@@ -22,34 +22,42 @@
             background-color: white;
             position: absolute;
             border-radius: 5px;
+            box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3);
         }
 
         .item-1 {
             top: 0%;
             left: 0%;
             animation-name: rotate1;
-            animation-duration: 1s;
+            animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-play-state: paused;
+            animation-direction: alternate;
         }
 
         .item-2 {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            animation-name: rotate2;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+            animation-direction: alternate;
         }
 
         .item-3 {
             bottom: 0%;
             left: 0%;
             animation-name: rotate3;
-            animation-duration: 1s;
+            animation-duration: 2s;
             animation-iteration-count: infinite;
             animation-play-state: paused;
+            animation-direction: alternate;
         }
 
         &:hover {
-            .item-1, .item-3 {
+            .item-1, .item-2, .item-3 {
                 animation-play-state: running;
             }
         }
@@ -64,8 +72,17 @@
     }
 
     100% {
-        top: 0%;
+        top: 50%;
         left: 0%;
+        transform: translateY(-50%) rotate(135deg);
+    }
+}
+
+@keyframes rotate2 {
+    100% {
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%) rotate(45deg);
     }
 }
 
@@ -77,7 +94,8 @@
     }
 
     100% {
-        bottom: 0%;
+        bottom: 50%;
         left: 0%;
+        transform: translateY(50%) rotate(135deg);
     }
 }

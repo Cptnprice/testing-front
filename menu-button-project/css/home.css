@@ -19,26 +19,34 @@
       height: 10px;
       background-color: white;
       position: absolute;
-      border-radius: 5px; }
+      border-radius: 5px;
+      box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.3); }
     .container .items .item-1 {
       top: 0%;
       left: 0%;
       animation-name: rotate1;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
-      animation-play-state: paused; }
+      animation-play-state: paused;
+      animation-direction: alternate; }
     .container .items .item-2 {
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      animation-name: rotate2;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-play-state: paused;
+      animation-direction: alternate; }
     .container .items .item-3 {
       bottom: 0%;
       left: 0%;
       animation-name: rotate3;
-      animation-duration: 1s;
+      animation-duration: 2s;
       animation-iteration-count: infinite;
-      animation-play-state: paused; }
-    .container .items:hover .item-1, .container .items:hover .item-3 {
+      animation-play-state: paused;
+      animation-direction: alternate; }
+    .container .items:hover .item-1, .container .items:hover .item-2, .container .items:hover .item-3 {
       animation-play-state: running; }
 
 @keyframes rotate1 {
@@ -47,15 +55,22 @@
     left: 50%;
     transform: translate(-50%, -50%); }
   100% {
-    top: 0%;
-    left: 0%; } }
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) rotate(135deg); } }
+@keyframes rotate2 {
+  100% {
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%) rotate(45deg); } }
 @keyframes rotate3 {
   50% {
     bottom: 50%;
     left: 50%;
     transform: translate(-50%, 50%); }
   100% {
-    bottom: 0%;
-    left: 0%; } }
+    bottom: 50%;
+    left: 0%;
+    transform: translateY(50%) rotate(135deg); } }
 
 /*# sourceMappingURL=home.css.map */
