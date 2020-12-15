@@ -21,22 +21,49 @@
         color: white;
         font-family: sans-serif; }
   .container .lines {
-    width: 50px;
+    width: 100px;
     height: 100px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); }
     .container .lines .each-line {
-      width: 100%;
+      width: 50%;
       height: 5px;
       position: absolute;
       background-color: white; }
       .container .lines .each-line:first-of-type {
         top: 35%;
-        left: 0%; }
+        left: 0%;
+        transform: translate(50%, -35%);
+        animation: 1s linear forwards paused first-line, 0.5s linear 1s forwards paused line-grow; }
       .container .lines .each-line:nth-of-type(2) {
         bottom: 35%;
-        left: 0%; }
+        left: 0%;
+        transform: translate(50%, 35%);
+        animation: 1s linear forwards paused second-line, 0.5s linear 1s forwards paused line-grow; }
+    .container .lines:hover .each-line:first-of-type, .container .lines:hover .each-line:nth-of-type(2) {
+      animation-play-state: running; }
+
+@keyframes first-line {
+  25% {
+    top: 40%;
+    left: 0%;
+    transform: translate(50%, -40%); }
+  100% {
+    top: 0%;
+    left: 0%; } }
+@keyframes line-grow {
+  100% {
+    width: 100%;
+    margin-left: -50%; } }
+@keyframes second-line {
+  25% {
+    bottom: 40%;
+    left: 0%;
+    transform: translate(50%, 40%); }
+  100% {
+    bottom: 0%;
+    left: 0%; } }
 
 /*# sourceMappingURL=home.css.map */
