@@ -52,7 +52,8 @@
     transform: translate(50%, -40%); }
   100% {
     top: 0%;
-    left: 0%; } }
+    left: 0%;
+    transform: translate(50%, 0%); } }
 @keyframes line-grow {
   100% {
     width: 100%;
@@ -64,6 +65,7 @@
     transform: translate(50%, 40%); }
   100% {
     bottom: 0%;
-    left: 0%; } }
+    left: 0%;
+    transform: translate(50%, 0%); } }
 
 /*# sourceMappingURL=home.css.map */
