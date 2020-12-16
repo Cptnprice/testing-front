@@ -8,13 +8,17 @@
     transform: translate(-50%, -50%);
     
     ul {
-      display: none;
+      width: 100px;
+      display: flex;
+      justify-content: space-around;
+      opacity: 0;
       padding: 0;
       margin: 0;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      animation: 0.5s linear 1.5s forwards paused ul-show;
       li {
         display: inline;
         
@@ -54,13 +58,19 @@
           animation: 1s linear forwards paused second-line, 0.5s linear 1s forwards paused line-grow;
         }
       }
+    }
 
+    .container-1 {
       &:hover {
         .each-line {
 
           &:first-of-type, &:nth-of-type(2) {
             animation-play-state: running;
           }
+        }
+
+        ul {
+          animation-play-state: running;
         }
       }
     }
@@ -96,5 +106,11 @@
       bottom: 0%;
       left: 0%;
       transform: translate(50%, 0%);
+    }
+  }
+
+  @keyframes ul-show {
+    100% {
+      opacity: 1;
     }
   }
