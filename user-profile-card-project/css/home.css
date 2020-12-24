@@ -1,3 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sans-serif"; }
 
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5f75c9; }
+  body .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px; }
+    body .card .image-container {
+      width: 100%;
+      position: relative;
+      border-radius: 5px;
+      box-shadow: 0 15px 55px rgba(0, 0, 0, 0.5); }
+      body .card .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 5px; }
+      body .card .image-container p {
+        width: max-content;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%); }
+    body .card .statistic {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0 5px 55px rgba(0, 0, 0, 0.5); }
+      body .card .statistic .projects p:nth-of-type(2), body .card .statistic .followers p:nth-of-type(2), body .card .statistic .articles p:nth-of-type(2) {
+        margin-top: 5px;
+        font-size: 10px; }
+    body .card .follow {
+      width: 70%;
+      text-align: center;
+      padding: 15px;
+      border-radius: 5px;
+      background-color: #b8af47;
+      color: white;
+      box-shadow: 0 5px 55px rgba(0, 0, 0, 0.5);
+      cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */
