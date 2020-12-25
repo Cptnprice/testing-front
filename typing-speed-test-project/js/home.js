@@ -4,22 +4,22 @@ let typedWords = 0;
 let i = 0;
 let testing = words[i].length;
 let testing2 = 0;
-let testing3 = false;
+let incorrectTyped = false;
 let first = document.getElementById(i);
 first.classList.add("underline-word");
 
 let typedText = document.getElementById("typed-text");
 
-typedText.addEventListener("keyup", (e) => {
+typedText.addEventListener("input", (e) => {
     testing = words[i].length;
-    console.log(e.key, testing, testing2);
+    console.log(e.data, testing, testing2);
     if (testing2 < testing) {
-        if (e.key == words[i][testing2]) {
+        if (e.data == words[i][testing2]) {
             if (typedText.value == words[i].substring(0, testing2+1)) {
                 temp = document.getElementById(i);
-                if (testing3) {
+                if (incorrectTyped) {
                     temp.innerHTML = temp.innerHTML.replace('class="incorrect-character', 'class="typed-character"');
-                    testing3 = false;
+                    incorrectTyped = false;
                 }
                 else{
                     temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
@@ -30,9 +30,10 @@ typedText.addEventListener("keyup", (e) => {
             }
         }
         else {
-            if (!testing3) {
+            if (!incorrectTyped) {
+                temp = document.getElementById(i);
                 temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="incorrect-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
-                testing3 = true;
+                incorrectTyped = true;
             }
         }
     }
@@ -43,6 +44,6 @@ typedText.addEventListener("keyup", (e) => {
         document.getElementById(i).classList.add("underline-word");
         testing2 = 0;
         typedText.value = "";
-        testing3 = false;
+        incorrectTyped = false;
     }
 })
