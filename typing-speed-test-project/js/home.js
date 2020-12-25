@@ -10,10 +10,9 @@ let typedText = document.getElementById("typed-text");
 typedText.addEventListener("keyup", (e) => {
     testing = words[i].length;
     if (testing2 < testing) {
-        console.log(e.key, words[i][testing2]);
         if (e.key == words[i][testing2]) {
             temp = document.getElementById(i);
-            temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span style="color: green">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
+            temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
             testing2++;
         }
     }
@@ -21,7 +20,6 @@ typedText.addEventListener("keyup", (e) => {
         typedWords++;
         i++;
         testing2 = 0;
-        console.log(typedText.value);
-        // console.log(typedText.value);
+        typedText.value = "";
     }
 })

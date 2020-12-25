@@ -19,5 +19,9 @@ body {
     width: 400px;
     padding: 15px;
     margin-top: 15px; }
+  body .typed-character {
+    color: green; }
+  body .incorrect-character {
+    color: red; }
 
 /*# sourceMappingURL=home.css.map */
