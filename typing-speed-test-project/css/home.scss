@@ -29,6 +29,11 @@ body {
 
     .typed-character {
         color: green;
+        text-decoration: inherit;
+    }
+
+    .underline-word {
+        text-decoration: underline;
     }
 
     .incorrect-character {

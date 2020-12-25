@@ -4,6 +4,8 @@ let typedWords = 0;
 let i = 0;
 let testing = words[i].length;
 let testing2 = 0;
+let first = document.getElementById(i);
+first.classList.add("underline-word");
 
 let typedText = document.getElementById("typed-text");
 
@@ -17,8 +19,10 @@ typedText.addEventListener("keyup", (e) => {
         }
     }
     else {
+        document.getElementById(i).classList.remove("underline-word");
         typedWords++;
         i++;
+        document.getElementById(i).classList.add("underline-word");
         testing2 = 0;
         typedText.value = "";
     }

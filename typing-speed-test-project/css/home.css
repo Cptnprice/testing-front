@@ -20,7 +20,10 @@ body {
     padding: 15px;
     margin-top: 15px; }
   body .typed-character {
-    color: green; }
+    color: green;
+    text-decoration: inherit; }
+  body .underline-word {
+    text-decoration: underline; }
   body .incorrect-character {
     color: red; }
 
