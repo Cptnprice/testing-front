@@ -6,25 +6,37 @@
 
 body {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     p {
         display: inline;
     }
 
-    .text-to-type {
-        width: 400px;
-        padding: 15px;
-        border: 1px solid lightgray;
-    }
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
 
-    input {
-        width: 400px;
-        padding: 15px;
-        margin-top: 15px;
+        .text-to-type {
+            width: 400px;
+            padding: 15px;
+            border: 1px solid lightgray;
+
+            p {
+                &:last-child {
+                    &::after {
+                        content: ".";
+                    }
+                }
+            }
+        }
+
+        input {
+            width: 400px;
+            padding: 15px;
+            margin-top: 15px;
+        }
     }
 
     .typed-character {
