@@ -1,10 +1,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   height: 100vh;
+<<<<<<< HEAD
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,6 +41,42 @@ body {
     text-decoration: underline; }
   body .incorrect-character {
     color: red; }
+=======
+  align-items: center;
+}
+body p {
+  display: inline;
+}
+body .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .container .text-to-type {
+  width: 400px;
+  padding: 15px;
+  border: 1px solid lightgray;
+}
+body .container .text-to-type p:last-child::after {
+  content: ".";
+}
+body .container input {
+  width: 400px;
+  padding: 15px;
+  margin-top: 15px;
+}
+body .typed-character {
+  color: green;
+  text-decoration: inherit;
+}
+body .underline-word {
+  text-decoration: underline;
+}
+body .incorrect-character {
+  color: red;
+}
+>>>>>>> 6b9ade98b259ee340d09d51d6d89d7a76c2bf5de
 
 @keyframes complete {
   100% {
