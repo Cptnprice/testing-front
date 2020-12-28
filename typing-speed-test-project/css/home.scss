@@ -11,8 +11,30 @@ body {
     justify-content: center;
     align-items: center;
 
+    .testing {
+        width: 400px;
+        padding: 15px;
+        background-color: lightblue;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -30%);
+        opacity: 0;
+    }
+
+    .completed {
+        animation: 1s forwards complete;
+    }
+
     p {
         display: inline;
+
+        &:last-child {
+
+            &::after {
+                content: ".";
+            }
+        }
     }
 
     .text-to-type {
@@ -38,5 +60,11 @@ body {
 
     .incorrect-character {
         color: red;
+    }
+}
+
+@keyframes complete {
+    100% {
+        opacity: 1;
     }
 }

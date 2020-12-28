@@ -40,6 +40,9 @@ typedText.addEventListener("input", (e) => {
     else {
         document.getElementById(i).classList.remove("underline-word");
         typedWords++;
+        if (typedWords == words.length) {
+            document.getElementById("test").classList.add("completed");
+        }
         i++;
         document.getElementById(i).classList.add("underline-word");
         testing2 = 0;
