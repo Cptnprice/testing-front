@@ -54,7 +54,7 @@ function wordsPerMinuteTimer() {
     wordsPerMinuteTimerId = setTimeout(setWordsPerMinute, 3000);
 }
 
-typedText.addEventListener("input", (e) => {
+function measure(e) {
     if (!stopwatchStarted) {
         timer();
         wordsPerMinuteTimer();
@@ -96,11 +96,16 @@ typedText.addEventListener("input", (e) => {
             result.innerHTML = `Your WPM is ${wordsPerMinute}`;
             clearTimeout(timerId);
             clearTimeout(wordsPerMinuteTimerId);
+            typedText.removeEventListener("input", measure);
         }
-        i++;
-        document.getElementById(i).classList.add("underline-word");
-        testing2 = 0;
-        typedText.value = "";
-        incorrectTyped = false;
+        else {
+            i++;
+            document.getElementById(i).classList.add("underline-word");
+            testing2 = 0;
+            typedText.value = "";
+            incorrectTyped = false;
+        }
     }
-})
+}
+
+typedText.addEventListener("input", measure)
