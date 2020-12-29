@@ -68,7 +68,6 @@ function measure(e) {
 getText().then((result) => {
     textToType = result["extract"];
     textToType = textToType.substring(0, textToType.length - 1);
-    textToType = "test test test";
     let textToTypeTest = document.getElementById("text-to-type-test");
     words = textToType.split(" ");
     words.forEach((word, i) => {
