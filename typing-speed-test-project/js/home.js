@@ -1,4 +1,5 @@
 import { getText } from "./TextToType.js";
+import { time, stopwatchStarted, hours, minutes, seconds, totalTime, timerId, increment, timer, setStopwatchStarted } from "./StopWatch.js";
 
 let textToType;
 let words;
@@ -7,42 +8,13 @@ let wordsPerMinuteContainer;
 let i;
 let totalTypedCharacters;
 let wordsPerMinuteTimerId;
-let time;
 let wordsPerMinute;
-let stopwatchStarted;
-let hours;
-let minutes;
-let seconds;
-let totalTime;
-let timerId;
 let testing;
 let testing2;
 let incorrectTyped;
 let first;
 let typedText;
-
-function increment() {
-    totalTime++;
-    seconds++;
-    if (seconds >= 60) {
-        seconds = 0;
-        minutes++;
-        if (minutes >= 60) {
-            minutes = 0;
-            hours++;
-        }
-    }
-
-    time.innerHTML = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +
-                    (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" +
-                    (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00");
-
-    timer();
-}
-
-function timer() {
-    timerId = setTimeout(increment, 1000);
-}
+let temp;
 
 function setWordsPerMinute() {
     wordsPerMinute = Number.parseFloat((totalTypedCharacters/5)/(totalTime/60)).toFixed(2);
@@ -58,7 +30,7 @@ function measure(e) {
     if (!stopwatchStarted) {
         timer();
         wordsPerMinuteTimer();
-        stopwatchStarted = true;
+        setStopwatchStarted();
     }
     testing = words[i].length;
     console.log(e.data, testing, testing2);
@@ -123,13 +95,7 @@ getText().then((result) => {
     wordsPerMinuteContainer = document.getElementById("words-per-minute");
     i = 0;
     totalTypedCharacters = 0;
-    time = document.getElementById("time");
     wordsPerMinute = 0;
-    stopwatchStarted = false;
-    hours = 0;
-    minutes = 0;
-    seconds = 0;
-    totalTime = 0;
     testing = words[i].length;
     testing2 = 0;
     incorrectTyped = false;
