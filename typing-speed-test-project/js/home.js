@@ -20,7 +20,6 @@ function measure(e) {
         setStopwatchStarted();
     }
     testing = words[i].length;
-    console.log(e.data, testing, testing2);
     if (testing2 < testing) {
         if (e.data == words[i][testing2]) {
             if (typedText.value == words[i].substring(0, testing2+1)) {
