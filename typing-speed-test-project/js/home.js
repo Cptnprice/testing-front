@@ -1,30 +1,17 @@
 import { getText } from "./TextToType.js";
-import { time, stopwatchStarted, hours, minutes, seconds, totalTime, timerId, increment, timer, setStopwatchStarted } from "./StopWatch.js";
+import { stopwatchStarted, timerId, timer, setStopwatchStarted } from "./Stopwatch.js";
+import { wordsPerMinuteTimerId, wordsPerMinute, wordsPerMinuteTimer, increaseTotalTypedCharacters } from "./WordsPerMinuteTimer.js";
 
 let textToType;
 let words;
 let typedWords;
-let wordsPerMinuteContainer;
-let i;
-let totalTypedCharacters;
-let wordsPerMinuteTimerId;
-let wordsPerMinute;
+let i = 0;
 let testing;
-let testing2;
-let incorrectTyped;
+let testing2 = 0;
+let incorrectTyped = false;
 let first;
 let typedText;
 let temp;
-
-function setWordsPerMinute() {
-    wordsPerMinute = Number.parseFloat((totalTypedCharacters/5)/(totalTime/60)).toFixed(2);
-    wordsPerMinuteContainer.innerHTML = `WPM: ${wordsPerMinute}`;
-    wordsPerMinuteTimer();
-}
-
-function wordsPerMinuteTimer() {
-    wordsPerMinuteTimerId = setTimeout(setWordsPerMinute, 3000);
-}
 
 function measure(e) {
     if (!stopwatchStarted) {
@@ -37,7 +24,7 @@ function measure(e) {
     if (testing2 < testing) {
         if (e.data == words[i][testing2]) {
             if (typedText.value == words[i].substring(0, testing2+1)) {
-                totalTypedCharacters++;
+                increaseTotalTypedCharacters();
                 temp = document.getElementById(i);
                 if (incorrectTyped) {
                     temp.innerHTML = temp.innerHTML.replace('class="incorrect-character', 'class="typed-character"');
@@ -46,8 +33,6 @@ function measure(e) {
                 else{
                     temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
                 }
-                // temp = document.getElementById(i);
-                // console.log(temp.innerHTML);
                 testing2++;
             }
         }
@@ -83,6 +68,7 @@ function measure(e) {
 getText().then((result) => {
     textToType = result["extract"];
     textToType = textToType.substring(0, textToType.length - 1);
+    textToType = "test test test";
     let textToTypeTest = document.getElementById("text-to-type-test");
     words = textToType.split(" ");
     words.forEach((word, i) => {
@@ -92,13 +78,7 @@ getText().then((result) => {
         textToTypeTest.appendChild(temp);
     })
     typedWords = 0;
-    wordsPerMinuteContainer = document.getElementById("words-per-minute");
-    i = 0;
-    totalTypedCharacters = 0;
-    wordsPerMinute = 0;
     testing = words[i].length;
-    testing2 = 0;
-    incorrectTyped = false;
     first = document.getElementById(i);
     first.classList.add("underline-word");
 
