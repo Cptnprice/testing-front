@@ -1,25 +1,29 @@
-let textToType = "When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs";
-let words = textToType.split(" ");
-let typedWords = 0;
-let wordsPerMinuteContainer = document.getElementById("words-per-minute");
-let i = 0;
-let totalTypedCharacters = 0;
+let textToType;
+let words;
+let typedWords;
+let wordsPerMinuteContainer;
+let i;
+let totalTypedCharacters;
 let wordsPerMinuteTimerId;
-let time = document.getElementById("time");
-let wordsPerMinute = 0;
-let stopwatchStarted = false;
-let hours = 0;
-let minutes = 0;
-let seconds = 0;
-let totalTime = 0;
+let time;
+let wordsPerMinute;
+let stopwatchStarted;
+let hours;
+let minutes;
+let seconds;
+let totalTime;
 let timerId;
-let testing = words[i].length;
-let testing2 = 0;
-let incorrectTyped = false;
-let first = document.getElementById(i);
-first.classList.add("underline-word");
+let testing;
+let testing2;
+let incorrectTyped;
+let first;
+let typedText;
 
-let typedText = document.getElementById("typed-text");
+const getText = async () => {
+    const response = await fetch("https://en.wikipedia.org/api/rest_v1/page/random/summary");
+    const myJson = response.json();
+    return myJson;
+}
 
 function increment() {
     totalTime++;
@@ -34,8 +38,8 @@ function increment() {
     }
 
     time.innerHTML = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" +
-                      (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" +
-                      (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00");
+                    (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" +
+                    (seconds ? (seconds > 9 ? seconds : "0" + seconds) : "00");
 
     timer();
 }
@@ -108,4 +112,35 @@ function measure(e) {
     }
 }
 
-typedText.addEventListener("input", measure)
+getText().then((result) => {
+    textToType = result["extract"];
+    textToType = textToType.substring(0, textToType.length - 1);
+    let textToTypeTest = document.getElementById("text-to-type-test");
+    words = textToType.split(" ");
+    words.forEach((word, i) => {
+        let temp = document.createElement("p");
+        temp.innerHTML = word;
+        temp.id = i;
+        textToTypeTest.appendChild(temp);
+    })
+    typedWords = 0;
+    wordsPerMinuteContainer = document.getElementById("words-per-minute");
+    i = 0;
+    totalTypedCharacters = 0;
+    time = document.getElementById("time");
+    wordsPerMinute = 0;
+    stopwatchStarted = false;
+    hours = 0;
+    minutes = 0;
+    seconds = 0;
+    totalTime = 0;
+    testing = words[i].length;
+    testing2 = 0;
+    incorrectTyped = false;
+    first = document.getElementById(i);
+    first.classList.add("underline-word");
+
+    typedText = document.getElementById("typed-text");
+
+    typedText.addEventListener("input", measure)
+})

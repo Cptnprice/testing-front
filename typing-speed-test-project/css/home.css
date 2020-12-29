@@ -13,7 +13,7 @@ body {
     padding: 15px;
     background-color: lightblue;
     position: absolute;
-    top: 30%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -30%);
     opacity: 0; }
@@ -25,15 +25,17 @@ body {
   body .completed {
     animation: 1s forwards complete; }
   body .text-to-type {
-    width: 400px;
+    width: 500px;
     padding: 15px;
     border: 1px solid lightgray; }
     body .text-to-type p {
-      display: inline; }
+      display: inline;
+      padding-right: 5px;
+      word-break: break-all; }
       body .text-to-type p:last-child::after {
         content: "."; }
   body input {
-    width: 400px;
+    width: 500px;
     padding: 15px;
     margin-top: 15px; }
   body .typed-character {
