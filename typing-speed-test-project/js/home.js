@@ -49,7 +49,7 @@ function timer() {
 }
 
 function setWordsPerMinute() {
-    wordsPerMinute = (totalTypedCharacters/5)/(totalTime/60);
+    wordsPerMinute = Number.parseFloat((totalTypedCharacters/5)/(totalTime/60)).toFixed(2);
     wordsPerMinuteContainer.innerHTML = `WPM: ${wordsPerMinute}`;
     wordsPerMinuteTimer();
 }
