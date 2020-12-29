@@ -17,6 +17,8 @@ body {
     left: 50%;
     transform: translate(-50%, -30%);
     opacity: 0; }
+    body .testing a {
+      color: black; }
   body .container {
     width: 700px;
     position: absolute;

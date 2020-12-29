@@ -50,7 +50,7 @@ function measure(e) {
         if (typedWords == words.length) {
             let result = document.getElementById("test");
             result.classList.add("completed");
-            result.innerHTML = `Your WPM is ${wordsPerMinute}`;
+            result.innerHTML = `Your WPM is ${wordsPerMinute}. <a href=".">New one</a>`;
             clearTimeout(timerId);
             clearTimeout(wordsPerMinuteTimerId);
             typedText.removeEventListener("input", measure);
