@@ -1,3 +1,5 @@
+import { getText } from "./TextToType.js";
+
 let textToType;
 let words;
 let typedWords;
@@ -18,12 +20,6 @@ let testing2;
 let incorrectTyped;
 let first;
 let typedText;
-
-const getText = async () => {
-    const response = await fetch("https://en.wikipedia.org/api/rest_v1/page/random/summary");
-    const myJson = response.json();
-    return myJson;
-}
 
 function increment() {
     totalTime++;
