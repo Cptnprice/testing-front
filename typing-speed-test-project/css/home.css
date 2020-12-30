@@ -9,7 +9,7 @@ body {
     padding-top: 15px;
     padding-left: 15px; }
   body .testing {
-    width: 700px;
+    width: 40%;
     padding: 15px;
     background-color: lightblue;
     position: absolute;
@@ -20,7 +20,7 @@ body {
     body .testing a {
       color: black; }
   body .container {
-    width: 700px;
+    width: 40%;
     position: absolute;
     top: 50%;
     left: 50%;
