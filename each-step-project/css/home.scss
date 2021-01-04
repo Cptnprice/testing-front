@@ -25,6 +25,11 @@ body {
                 background-color: white;
             }
 
+            .active-dot {
+                border: 3px solid #5969d5;
+                color: black;
+            }
+
             .horizontal-line {
                 width: 90px;
                 height: 5px;
@@ -32,16 +37,11 @@ body {
                 background: linear-gradient(to left, #d9dad9 50%, #5969d5 50%);
                 background-size: 200% 100%;
                 background-position: right bottom;
-                transition: 0.5s ease-out;
-
-                &:hover {
-                    background-position: left bottom;
-                }
+                transition: 0.3s ease-out;
             }
 
-            .active {
-                border: 3px solid #5969d5;
-                color: black;
+            .active-horizontal-line {
+                background-position: left bottom;
             }
         }
 
@@ -57,6 +57,12 @@ body {
                 border: none;
                 color: white;
                 background-color: #5969d5;
+                cursor: pointer;
+            }
+
+            .unavailable {
+                background-color: lightgray;
+                cursor: not-allowed;
             }
         }
     }

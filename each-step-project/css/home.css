@@ -20,6 +20,9 @@ body {
         color: #d9dad9;
         border-radius: 50%;
         background-color: white; }
+      body .container .dots .active-dot {
+        border: 3px solid #5969d5;
+        color: black; }
       body .container .dots .horizontal-line {
         width: 90px;
         height: 5px;
@@ -27,12 +30,9 @@ body {
         background: linear-gradient(to left, #d9dad9 50%, #5969d5 50%);
         background-size: 200% 100%;
         background-position: right bottom;
-        transition: 0.5s ease-out; }
-        body .container .dots .horizontal-line:hover {
-          background-position: left bottom; }
-      body .container .dots .active {
-        border: 3px solid #5969d5;
-        color: black; }
+        transition: 0.3s ease-out; }
+      body .container .dots .active-horizontal-line {
+        background-position: left bottom; }
     body .container .previous-next-buttons {
       width: 55%;
       display: flex;
@@ -43,6 +43,10 @@ body {
         border-radius: 5px;
         border: none;
         color: white;
-        background-color: #5969d5; }
+        background-color: #5969d5;
+        cursor: pointer; }
+      body .container .previous-next-buttons .unavailable {
+        background-color: lightgray;
+        cursor: not-allowed; }
 
 /*# sourceMappingURL=home.css.map */
