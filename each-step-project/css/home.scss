@@ -29,6 +29,14 @@ body {
                 width: 90px;
                 height: 5px;
                 background-color: #d9dad9;
+                background: linear-gradient(to left, #d9dad9 50%, #5969d5 50%);
+                background-size: 200% 100%;
+                background-position: right bottom;
+                transition: 0.5s ease-out;
+
+                &:hover {
+                    background-position: left bottom;
+                }
             }
 
             .active {
