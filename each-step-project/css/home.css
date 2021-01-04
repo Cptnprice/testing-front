@@ -1,3 +1,27 @@
-
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eff1f0; }
+  body .container {
+    display: flex;
+    flex-direction: column; }
+    body .container .dots {
+      display: flex;
+      align-items: center; }
+      body .container .dots .each-dot {
+        width: 20px;
+        padding: 5px;
+        text-align: center;
+        border: 3px solid #d9dad9;
+        border-radius: 50%;
+        background-color: white; }
+      body .container .dots .horizontal-line {
+        width: 90px;
+        height: 5px;
+        background-color: #d9dad9; }
+    body .container .previous-next-buttons {
+      display: flex; }
 
 /*# sourceMappingURL=home.css.map */

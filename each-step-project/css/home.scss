@@ -1,0 +1,37 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eff1f0;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        .dots {
+            display: flex;
+            align-items: center;
+
+            .each-dot {
+                width: 20px;
+                padding: 5px;
+                text-align: center;
+                border: 3px solid #d9dad9;
+                // color: #d9dad9;
+                border-radius: 50%;
+                background-color: white;
+            }
+
+            .horizontal-line {
+                width: 90px;
+                height: 5px;
+                background-color: #d9dad9;
+            }
+        }
+
+        .previous-next-buttons {
+            display: flex;
+        }
+    }
+}
