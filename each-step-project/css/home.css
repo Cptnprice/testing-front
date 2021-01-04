@@ -6,22 +6,37 @@ body {
   background-color: #eff1f0; }
   body .container {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    align-items: center; }
     body .container .dots {
       display: flex;
-      align-items: center; }
+      align-items: center;
+      margin-bottom: 40px; }
       body .container .dots .each-dot {
         width: 20px;
         padding: 5px;
         text-align: center;
         border: 3px solid #d9dad9;
+        color: #d9dad9;
         border-radius: 50%;
         background-color: white; }
       body .container .dots .horizontal-line {
         width: 90px;
         height: 5px;
         background-color: #d9dad9; }
+      body .container .dots .active {
+        border: 3px solid #5969d5;
+        color: black; }
     body .container .previous-next-buttons {
-      display: flex; }
+      width: 55%;
+      display: flex;
+      justify-content: space-between; }
+      body .container .previous-next-buttons button {
+        width: 105px;
+        padding: 10px 25px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: #5969d5; }
 
 /*# sourceMappingURL=home.css.map */
