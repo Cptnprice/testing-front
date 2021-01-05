@@ -12,7 +12,8 @@ body {
   body .container {
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    color: white; }
     body .container h1 {
       margin-top: 5%;
       margin-bottom: 5%; }
@@ -21,6 +22,7 @@ body {
     body .container .big-glass {
       width: 150px;
       height: 350px;
+      margin-bottom: 5%;
       background-color: white;
       border: 5px solid #2d3ec1;
       border-radius: 0px 0px 40px 40px; }
@@ -31,5 +33,32 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center; }
+        body .container .big-glass .remained p {
+          color: #2d3ec1; }
+      body .container .big-glass .completed {
+        display: flex;
+        justify-content: center;
+        visibility: hidden; }
+    body .container .small-glasses {
+      display: flex;
+      width: 230px;
+      flex-wrap: wrap; }
+      body .container .small-glasses .each-glass {
+        width: 50px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        background-color: white;
+        border: 5px solid #2d3ec1;
+        border-radius: 0px 0px 18px 18px;
+        margin-right: 10px;
+        cursor: pointer; }
+        body .container .small-glasses .each-glass:last-child, body .container .small-glasses .each-glass:nth-child(4) {
+          margin-right: 0px; }
+        body .container .small-glasses .each-glass p {
+          color: #2d3ec1; }
 
 /*# sourceMappingURL=home.css.map */
