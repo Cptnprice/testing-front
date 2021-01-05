@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #467dcf;
+    font-family: "sans-serif";
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        h2 {
+            margin-bottom: 10%;
+        }
+
+        .big-glass {
+            width: 150px;
+            height: 350px;
+            background-color: white;
+            border: 5px solid #2d3ec1;
+            border-radius: 0px 0px 40px 40px;
+
+            .remained {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+}
