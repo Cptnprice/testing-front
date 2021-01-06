@@ -44,8 +44,8 @@ for (let i = 0; i < glasses.length; i++) {
         await measure(c, i);
         let newRemainedQuantity = Number.parseFloat(totalActive ? ((totalActive * 2) / 8) : 2).toFixed(2);
         let newDoneQuantity = (totalActive * 100) / 8;
-        let newCompletedContainerHeight = (350 * newDoneQuantity) / 100;
-        let newRemainedContainerHeight = (350 * (100 - newDoneQuantity)) / 100;
+        let newCompletedContainerHeight = (340 * newDoneQuantity) / 100;
+        let newRemainedContainerHeight = (340 * (100 - newDoneQuantity)) / 100;
         remainedQuantity.innerHTML = `${newRemainedQuantity} L`;
         doneQuantity.innerHTML = `${newDoneQuantity}%`;
         completedContainer.style.height = newCompletedContainerHeight + "px";
