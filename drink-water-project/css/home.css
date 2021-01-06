@@ -63,11 +63,16 @@ body {
         border: 5px solid #2d3ec1;
         border-radius: 0px 0px 18px 18px;
         margin-right: 10px;
-        cursor: pointer; }
+        cursor: pointer;
+        transition: all 0.5s; }
         body .container .small-glasses .each-glass:last-child, body .container .small-glasses .each-glass:nth-child(4) {
           margin-right: 0px; }
         body .container .small-glasses .each-glass p {
           color: #2d3ec1; }
+      body .container .small-glasses .active {
+        background-color: #595fdd; }
+        body .container .small-glasses .active p {
+          color: white; }
 
 @keyframes increase-completed {
   100% {
