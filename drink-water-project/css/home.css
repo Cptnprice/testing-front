@@ -34,7 +34,8 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        transition: 0.5s; }
         body .container .big-glass .remained p {
           color: #2d3ec1; }
       body .container .big-glass .completed {
@@ -46,7 +47,7 @@ body {
         position: absolute;
         bottom: 0%;
         background-color: #595fdd;
-        animation: 2s forwards increase-completed; }
+        transition: all 0.5s; }
     body .container .small-glasses {
       display: flex;
       width: 230px;
@@ -73,9 +74,5 @@ body {
         background-color: #595fdd; }
         body .container .small-glasses .active p {
           color: white; }
-
-@keyframes increase-completed {
-  100% {
-    height: 90px; } }
 
 /*# sourceMappingURL=home.css.map */
