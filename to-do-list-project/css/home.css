@@ -1,3 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #7d8fb5;
+  font-family: sans-serif; }
+  body .container {
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%; }
+    body .container h1 {
+      font-size: 3rem;
+      color: white; }
+    body .container form {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30%; }
+      body .container form .title {
+        padding: 15px;
+        border: none; }
+      body .container form .to-do-submit {
+        border: none;
+        background-color: transparent;
+        font-size: 2rem;
+        cursor: pointer; }
+    body .container .to-do-list {
+      width: 100%;
+      margin-top: 5%; }
+      body .container .to-do-list ul {
+        list-style-type: none; }
+        body .container .to-do-list ul .each-to-do {
+          display: flex;
+          align-items: center;
+          padding: 15px 5px 15px 15px;
+          background-color: white; }
+          body .container .to-do-list ul .each-to-do li {
+            flex: 1; }
+          body .container .to-do-list ul .each-to-do button {
+            border: none;
+            background-color: transparent;
+            font-size: 1.5rem;
+            cursor: pointer; }
+          body .container .to-do-list ul .each-to-do .check-to-do {
+            margin-right: 5%; }
 
 /*# sourceMappingURL=home.css.map */
