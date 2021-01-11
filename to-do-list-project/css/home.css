@@ -41,6 +41,7 @@ body {
           display: flex;
           align-items: center;
           padding: 15px 5px 15px 15px;
+          margin-top: 5%;
           background-color: white; }
           body .container .to-do-list ul .each-to-do li {
             flex: 1; }
