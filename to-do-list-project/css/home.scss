@@ -70,6 +70,14 @@ body {
 
                     .check-to-do {
                         margin-right: 5%;
+
+                        &:hover {
+                            color: green;
+                        }
+                    }
+
+                    .delete-to-do:hover {
+                        color: red;
                     }
                 }
 

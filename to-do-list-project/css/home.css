@@ -52,6 +52,10 @@ body {
             cursor: pointer; }
           body .container .to-do-list ul .each-to-do .check-to-do {
             margin-right: 5%; }
+            body .container .to-do-list ul .each-to-do .check-to-do:hover {
+              color: green; }
+          body .container .to-do-list ul .each-to-do .delete-to-do:hover {
+            color: red; }
         body .container .to-do-list ul .completed {
           opacity: 0.5; }
           body .container .to-do-list ul .completed li {
