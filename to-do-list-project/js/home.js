@@ -2,44 +2,43 @@ let storage = window.localStorage;
 let toDoList = document.getElementById("notes-list");
 let submitButton = document.getElementById("submit-note");
 let titleInput = document.getElementById("note-title");
-let titles = JSON.parse(storage.getItem("titles")) ? JSON.parse(storage.getItem("titles")) : [];
+let notes = JSON.parse(storage.getItem("notes")) ? JSON.parse(storage.getItem("notes")) : [];
 let changedList = false;
 let c = 0;
 
 function createOrUpdateList() {
     if (!storage.length || changedList) {
-        storage.setItem("titles", JSON.stringify(titles));
+        storage.setItem("notes", JSON.stringify(notes));
         changedList = false;
     }
 }
 
-function removeToDo(title, id) {
-    titles.splice(titles.indexOf(title), 1);
+function removeToDo(note, id) {
+    notes.splice(notes.indexOf(note), 1);
     document.getElementById(id).remove();
     changedList = true;
 }
 
 function updateToDo(title) {
-    let temp = titles.find((x) => {
+    let temp = notes.find((x) => {
         return x['title'] == title;
     });
     temp['completed'] = !temp['completed'];
-    console.log(temp);
     changedList = true;
 }
 
 function createToDoList() {
-    console.log(c);
     createOrUpdateList();
-    if (titles) {
-        titles.forEach((title) => {
-            createToDo(title['title'], title['completed']);
+    if (notes) {
+        notes.forEach((note) => {
+            createToDo(note);
         })
     }
 }
 
-function createToDo(newTitle, completed) {
-    console.log(c);
+function createToDo(note) {
+    let newTitle = note['title'];
+    let completed = note['completed'];
     let eachToDo = document.createElement('div');
     if (completed) {
         eachToDo.classList.add("completed");
@@ -53,7 +52,7 @@ function createToDo(newTitle, completed) {
     checkButton.classList.add("check-to-do");
     checkButton.innerHTML = '<i class="far fa-check-square"></i>';
     checkButton.addEventListener("click", () => {
-        eachToDo.classList.add("completed");
+        eachToDo.classList.toggle("completed");
         updateToDo(newTitle);
         createOrUpdateList();
     })
@@ -61,7 +60,7 @@ function createToDo(newTitle, completed) {
     deleteButton.classList.add("delete-to-do");
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
     deleteButton.addEventListener("click", () => {
-        removeToDo(newTitle, eachToDo.id);
+        removeToDo(note, eachToDo.id);
         createOrUpdateList();
     });
     eachToDo.appendChild(title);
@@ -71,12 +70,13 @@ function createToDo(newTitle, completed) {
 }
 
 function saveToDo(newTitle) {
-    createToDo(newTitle);
-    titleInput.value = "";
-    titles.push({
+    let newNote = {
         title: newTitle,
         completed: false
-    });
+    }
+    createToDo(newNote);
+    titleInput.value = "";
+    notes.push(newNote);
     changedList = true;
     createOrUpdateList();
 }
