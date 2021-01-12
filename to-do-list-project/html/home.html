@@ -14,14 +14,14 @@
             <form>
                 <input type="text" name="to-do-title" class="title" id="note-title" placeholder="enter title" />
                 <button type="submit" class="to-do-submit" id="submit-note"><i class="far fa-plus-square"></i></button>
+                <div class="select-container">
+                    <select id="filter-notes">
+                        <option selected value="all">All</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
             </form>
-            <div class="select-container">
-                <select id="filter-notes">
-                    <option selected value="all">All</option>
-                    <option value="completed">Completed</option>
-                    <option value="uncompleted">Uncompleted</option>
-                </select>
-            </div>
         </div>
         <div class="to-do-list">
             <ul id="notes-list"></ul>

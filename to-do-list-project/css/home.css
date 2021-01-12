@@ -25,7 +25,7 @@ body {
       body .container .add-filter form {
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center; }
         body .container .add-filter form .title {
           padding: 15px;
@@ -35,20 +35,23 @@ body {
           background-color: transparent;
           font-size: 2rem;
           cursor: pointer; }
-      body .container .add-filter .select-container {
-        position: relative; }
-        body .container .add-filter .select-container select {
+        body .container .add-filter form .select-container {
+          position: relative;
           height: 100%;
-          appearance: none;
-          border: none; }
-        body .container .add-filter .select-container::after {
-          content: "\25BC";
-          position: absolute;
-          top: 50%;
-          right: 5px;
-          transform: translateY(-50%);
-          color: #a7bb44;
-          pointer-events: none; }
+          width: 30%; }
+          body .container .add-filter form .select-container select {
+            height: 100%;
+            width: 100%;
+            appearance: none;
+            border: none; }
+          body .container .add-filter form .select-container::after {
+            content: "\25BC";
+            position: absolute;
+            top: 50%;
+            right: 5px;
+            transform: translateY(-50%);
+            color: #a7bb44;
+            pointer-events: none; }
     body .container .to-do-list {
       width: 100%;
       margin-top: 5%; }

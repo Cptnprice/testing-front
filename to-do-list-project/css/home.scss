@@ -31,7 +31,7 @@ body {
             form {
                 width: 100%;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
 
                 .title {
@@ -45,27 +45,31 @@ body {
                     font-size: 2rem;
                     cursor: pointer;
                 }
-            }
 
-            .select-container {
-                position: relative;
-
-                select {
+                .select-container {
+                    position: relative;
                     height: 100%;
-                    appearance: none;
-                    border: none;
-                }
-
-                &::after {
-                    content: "\25BC";
-                    position: absolute;
-                    top: 50%;
-                    right: 5px;
-                    transform: translateY(-50%);
-                    color: #a7bb44;
-                    pointer-events: none;
+                    width: 30%;
+    
+                    select {
+                        height: 100%;
+                        width: 100%;
+                        appearance: none;
+                        border: none;
+                    }
+    
+                    &::after {
+                        content: "\25BC";
+                        position: absolute;
+                        top: 50%;
+                        right: 5px;
+                        transform: translateY(-50%);
+                        color: #a7bb44;
+                        pointer-events: none;
+                    }
                 }
             }
+
         }
 
         .to-do-list {
