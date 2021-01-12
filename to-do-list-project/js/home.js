@@ -12,7 +12,7 @@ let filterObj = {
     'uncompleted': false
 };
 
-function createOrUpdateList() {
+function createOrUpdateStorageList() {
     if (!storage.length || changedList) {
         storage.setItem("notes", JSON.stringify(notes));
         changedList = false;
@@ -34,7 +34,7 @@ function updateToDo(title) {
 }
 
 function createToDoList(filterValue) {
-    createOrUpdateList();
+    createOrUpdateStorageList();
     notesShow = filterValue == "all" ? notes : notes.filter((x) => x['completed'] == filterObj[filterValue]);
     if (notesShow) {
         toDoList.innerHTML = "";
@@ -62,14 +62,14 @@ function createToDo(note) {
     checkButton.addEventListener("click", () => {
         eachToDo.classList.toggle("completed");
         updateToDo(newTitle);
-        createOrUpdateList();
+        createOrUpdateStorageList();
     })
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete-to-do");
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
     deleteButton.addEventListener("click", () => {
         removeToDo(note, eachToDo.id);
-        createOrUpdateList();
+        createOrUpdateStorageList();
     });
     eachToDo.appendChild(title);
     eachToDo.appendChild(checkButton);
@@ -86,7 +86,7 @@ function saveToDo(newTitle) {
     titleInput.value = "";
     notes.push(newNote);
     changedList = true;
-    createOrUpdateList();
+    createOrUpdateStorageList();
 }
 
 submitButton.addEventListener("click", (e) => {
@@ -96,7 +96,6 @@ submitButton.addEventListener("click", (e) => {
 })
 
 filterNotes.addEventListener("change", (e) => {
-    console.log(e.target.value);
     createToDoList(e.target.value);
 })
 

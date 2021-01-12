@@ -27,24 +27,44 @@ body {
             margin-top: 30%;
             width: 100%;
             display: flex;
-        }
 
-        form {
-            width: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+            form {
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
 
-            .title {
-                padding: 15px;
-                border: none;
+                .title {
+                    padding: 15px;
+                    border: none;
+                }
+
+                .to-do-submit {
+                    border: none;
+                    background-color: transparent;
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
             }
 
-            .to-do-submit {
-                border: none;
-                background-color: transparent;
-                font-size: 2rem;
-                cursor: pointer;
+            .select-container {
+                position: relative;
+
+                select {
+                    height: 100%;
+                    appearance: none;
+                    border: none;
+                }
+
+                &::after {
+                    content: "\25BC";
+                    position: absolute;
+                    top: 50%;
+                    right: 5px;
+                    transform: translateY(-50%);
+                    color: #a7bb44;
+                    pointer-events: none;
+                }
             }
         }
 
