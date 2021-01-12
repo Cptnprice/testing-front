@@ -52,5 +52,9 @@ body {
             cursor: pointer; }
           body .container .to-do-list ul .each-to-do .check-to-do {
             margin-right: 5%; }
+        body .container .to-do-list ul .completed {
+          opacity: 0.5; }
+          body .container .to-do-list ul .completed li {
+            text-decoration: line-through; }
 
 /*# sourceMappingURL=home.css.map */

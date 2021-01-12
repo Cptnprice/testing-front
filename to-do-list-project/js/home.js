@@ -19,19 +19,31 @@ function removeToDo(title, id) {
     changedList = true;
 }
 
+function updateToDo(title) {
+    let temp = titles.find((x) => {
+        return x['title'] == title;
+    });
+    temp['completed'] = !temp['completed'];
+    console.log(temp);
+    changedList = true;
+}
+
 function createToDoList() {
     console.log(c);
     createOrUpdateList();
     if (titles) {
         titles.forEach((title) => {
-            createToDo(title);
+            createToDo(title['title'], title['completed']);
         })
     }
 }
 
-function createToDo(newTitle) {
+function createToDo(newTitle, completed) {
     console.log(c);
     let eachToDo = document.createElement('div');
+    if (completed) {
+        eachToDo.classList.add("completed");
+    }
     eachToDo.id = c;
     c++;
     eachToDo.classList.add("each-to-do");
@@ -40,6 +52,11 @@ function createToDo(newTitle) {
     let checkButton = document.createElement("button");
     checkButton.classList.add("check-to-do");
     checkButton.innerHTML = '<i class="far fa-check-square"></i>';
+    checkButton.addEventListener("click", () => {
+        eachToDo.classList.add("completed");
+        updateToDo(newTitle);
+        createOrUpdateList();
+    })
     let deleteButton = document.createElement("button");
     deleteButton.classList.add("delete-to-do");
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
@@ -56,7 +73,10 @@ function createToDo(newTitle) {
 function saveToDo(newTitle) {
     createToDo(newTitle);
     titleInput.value = "";
-    titles.push(newTitle);
+    titles.push({
+        title: newTitle,
+        completed: false
+    });
     changedList = true;
     createOrUpdateList();
 }

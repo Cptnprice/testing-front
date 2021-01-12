@@ -72,6 +72,14 @@ body {
                         margin-right: 5%;
                     }
                 }
+
+                .completed {
+                    opacity: 0.5;
+
+                    li {
+                        text-decoration: line-through;
+                    }
+                }
             }
         }
     }
