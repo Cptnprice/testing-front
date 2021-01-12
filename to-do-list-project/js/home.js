@@ -3,8 +3,14 @@ let toDoList = document.getElementById("notes-list");
 let submitButton = document.getElementById("submit-note");
 let titleInput = document.getElementById("note-title");
 let notes = JSON.parse(storage.getItem("notes")) ? JSON.parse(storage.getItem("notes")) : [];
+let filterNotes = document.getElementById("filter-notes");
 let changedList = false;
 let c = 0;
+
+let filterObj = {
+    'completed' : true,
+    'uncompleted': false
+};
 
 function createOrUpdateList() {
     if (!storage.length || changedList) {
@@ -27,10 +33,12 @@ function updateToDo(title) {
     changedList = true;
 }
 
-function createToDoList() {
+function createToDoList(filterValue) {
     createOrUpdateList();
-    if (notes) {
-        notes.forEach((note) => {
+    notesShow = filterValue == "all" ? notes : notes.filter((x) => x['completed'] == filterObj[filterValue]);
+    if (notesShow) {
+        toDoList.innerHTML = "";
+        notesShow.forEach((note) => {
             createToDo(note);
         })
     }
@@ -87,4 +95,11 @@ submitButton.addEventListener("click", (e) => {
     saveToDo(newTitle);
 })
 
-window.onload = createToDoList;
+filterNotes.addEventListener("change", (e) => {
+    console.log(e.target.value);
+    createToDoList(e.target.value);
+})
+
+window.onload = () => {
+    createToDoList("all");
+}

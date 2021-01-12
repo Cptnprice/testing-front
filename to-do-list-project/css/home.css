@@ -10,7 +10,7 @@ body {
   background-color: #7d8fb5;
   font-family: sans-serif; }
   body .container {
-    min-width: 300px;
+    min-width: 440px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,12 +18,15 @@ body {
     body .container h1 {
       font-size: 3rem;
       color: white; }
+    body .container .add-filter {
+      margin-top: 30%;
+      width: 100%;
+      display: flex; }
     body .container form {
       width: 100%;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 30%; }
+      justify-content: space-evenly;
+      align-items: center; }
       body .container form .title {
         padding: 15px;
         border: none; }
