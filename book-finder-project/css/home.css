@@ -1,3 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+body {
+  background-color: #a9aac9;
+  font-family: sans-serif; }
+  body .container h1 {
+    text-align: center;
+    padding-top: 30px; }
+  body .container .search {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; }
+    body .container .search form input[type="text"] {
+      padding: 15px;
+      border: none; }
+    body .container .search form button {
+      padding: 15px;
+      border: none;
+      background-color: #c9dd39;
+      cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */
