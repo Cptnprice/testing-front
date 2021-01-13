@@ -40,7 +40,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        padding-right: 5px; }
+        padding-left: 5px; }
         body .container .book-list .each-book .book-other-information .bold-span {
           font-weight: bold; }
 
