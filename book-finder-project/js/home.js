@@ -26,10 +26,14 @@ bookSearchButton.addEventListener("click", async (e) => {
         publishDate.innerHTML = `<span class="bold-span">Publish Date</span>: ${book.volumeInfo.publishedDate}`;
         let publisher = document.createElement('p');
         publisher.innerHTML = `<span class="bold-span">Publisher</span>: ${book.volumeInfo.publisher ? book.volumeInfo.publisher : ""}`;
+        let moreInformationButton = document.createElement('button');
+        moreInformationButton.classList.add("more-information");
+        moreInformationButton.innerHTML = "More";
         bookOtherInformation.appendChild(bookTitle);
         bookOtherInformation.appendChild(authors);
         bookOtherInformation.appendChild(publishDate);
         bookOtherInformation.appendChild(publisher);
+        bookOtherInformation.appendChild(moreInformationButton);
         bookContainer.appendChild(bookImage);
         bookContainer.appendChild(bookOtherInformation);
         bookListing.appendChild(bookContainer);
