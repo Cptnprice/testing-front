@@ -101,6 +101,7 @@ body {
             align-items: start;
 
             .book-details-information {
+                max-width: 355px;
                 min-height: 400px;
                 display: flex;
                 flex-direction: column;

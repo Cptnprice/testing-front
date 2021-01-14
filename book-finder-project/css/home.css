@@ -67,6 +67,7 @@ body {
       justify-content: space-between;
       align-items: start; }
       body .book-details-container .book-details .book-details-information {
+        max-width: 355px;
         min-height: 400px;
         display: flex;
         flex-direction: column;
