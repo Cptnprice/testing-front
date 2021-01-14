@@ -38,20 +38,20 @@ body {
 
         .book-list {
             display: grid;
-            grid-template-columns: repeat(3, minmax(200px, 350px));
+            grid-template-columns: repeat(3, minmax(200px, 500px));
             justify-content: center;
             grid-gap: 50px 50px;
             margin-top: 5%;
+            margin-bottom: 5%;
 
             .each-book {
-                max-width: 350px;
+                max-width: 500px;
                 display: flex;
-                justify-content: space-between;
                 background-color: white;
                 box-shadow: 1px 1px 5px black;
 
                 img {
-                    max-width: 30%;
+                    max-width: 25%;
                     height: auto;
                 }
 
@@ -61,8 +61,12 @@ body {
                     justify-content: space-around;
                     padding-left: 5px;
 
-                    .bold-span {
-                        font-weight: bold;
+                    p {
+                        font-size: 12px;
+
+                        .bold-span {
+                            font-weight: bold;
+                        }
                     }
                 }
             }
