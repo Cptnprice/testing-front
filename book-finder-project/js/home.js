@@ -1,4 +1,4 @@
-import { getBook, createCommonFields, createBooks } from "./book.js";
+import { createBooks } from "./book.js";
 
 let bookListing = document.getElementById("book-listing");
 let bookCriteria = document.getElementById("book-criteria");

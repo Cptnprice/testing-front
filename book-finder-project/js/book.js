@@ -1,12 +1,8 @@
+import { getBook } from "./FetchBooks.js";
+
 let storage = window.localStorage;
 
 let bookListing = document.getElementById("book-listing");
-
-let getBook = async (searchQueryPart) => {
-    let response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${searchQueryPart}`);
-    let myJson = await response.json();
-    return myJson;
-}
 
 let createCommonFields = (book) => {
     let bookTitle = document.createElement('h3');
@@ -53,4 +49,4 @@ let createBooks = async (searchQueryPart) => {
     }
 }
 
-export { getBook, createCommonFields, createBooks, bookListing };
+export { createCommonFields, createBooks };
