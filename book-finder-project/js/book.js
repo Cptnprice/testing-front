@@ -18,7 +18,7 @@ let createCommonFields = (book) => {
 }
 
 let createBooks = async (searchQueryPart) => {
-    let myJson = JSON.parse(storage.getItem("books")) ? JSON.parse(storage.getItem("books")) : (searchQueryPart ? await getBook(searchQueryPart) : null);
+    let myJson = searchQueryPart ? await getBook(searchQueryPart) : (JSON.parse(storage.getItem("books")) ? JSON.parse(storage.getItem("books")) : null);
     storage.setItem("books", JSON.stringify(myJson));
     if (myJson) {
         myJson.items.forEach((book) => {

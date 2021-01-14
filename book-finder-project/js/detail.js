@@ -20,10 +20,10 @@ bookImage.classList.add("book-detail-image");
 bookImage.src = book.volumeInfo.imageLinks.thumbnail;
 let numberOfPages = document.createElement('p');
 numberOfPages.innerHTML = `<span class="bold-span">Number of pages</span>: ${book.volumeInfo.pageCount}`;
+bookDetailsInformation.appendChild(bookImage);
 commonFields.forEach((field) => {
     bookDetailsInformation.appendChild(field);
 });
-bookDetailsInformation.appendChild(bookImage);
 bookDetailsInformation.appendChild(numberOfPages);
 let bookDescriptionTitle = document.createElement('h3');
 bookDescriptionTitle.innerHTML = "Book Description";
