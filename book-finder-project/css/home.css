@@ -53,8 +53,14 @@ body {
           cursor: pointer; }
   body .book-details-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-top: 5%; }
+    body .book-details-container .back-button {
+      height: max-content;
+      padding: 15px;
+      border: none;
+      background-color: #dae1e7;
+      cursor: pointer; }
     body .book-details-container .book-details {
       width: 70%;
       display: flex;

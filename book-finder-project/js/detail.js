@@ -1,5 +1,10 @@
 let storage = window.localStorage;
 let bookInformation = document.getElementById("book-information");
+let previousButton = document.getElementById("previous-button");
+
+previousButton.addEventListener("click", () => {
+    window.history.back();
+})
 
 let book = JSON.parse(storage.getItem("currentBook"));
 let bookDetailsInformation = document.createElement('div');
