@@ -4,8 +4,9 @@ let storage = window.localStorage;
 let bookInformation = document.getElementById("book-information");
 let previousButton = document.getElementById("previous-button");
 
-previousButton.addEventListener("click", () => {
-    history.back();
+previousButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "home.html";
 })
 
 let book = JSON.parse(storage.getItem("currentBook"));
