@@ -1,9 +1,11 @@
+import { createCommonFields } from "./book.js";
+
 let storage = window.localStorage;
 let bookInformation = document.getElementById("book-information");
 let previousButton = document.getElementById("previous-button");
 
 previousButton.addEventListener("click", () => {
-    window.history.back();
+    history.back();
 })
 
 let book = JSON.parse(storage.getItem("currentBook"));
@@ -11,24 +13,16 @@ let bookDetailsInformation = document.createElement('div');
 let bookDescriptionContainer = document.createElement('div');
 bookDetailsInformation.classList.add("book-details-information");
 bookDescriptionContainer.classList.add("book-description");
-let bookTitle = document.createElement("h3");
-bookTitle.innerHTML = book.volumeInfo.title;
+let commonFields = createCommonFields(book);
 let bookImage = document.createElement("img");
 bookImage.classList.add("book-detail-image");
 bookImage.src = book.volumeInfo.imageLinks.thumbnail;
-let authors = document.createElement('p');
-authors.innerHTML = `<span class="bold-span">Authors</span>: ${book.volumeInfo.authors.join(',')}`;
-let publisher = document.createElement('p');
-publisher.innerHTML = `<span class="bold-span">Publisher</span>: ${book.volumeInfo.publisher ? book.volumeInfo.publisher : ''}`;
-let publishDate = document.createElement('p');
-publishDate.innerHTML = `<span class="bold-span">Publish date</span>: ${book.volumeInfo.publishedDate}`;
 let numberOfPages = document.createElement('p');
 numberOfPages.innerHTML = `<span class="bold-span">Number of pages</span>: ${book.volumeInfo.pageCount}`;
-bookDetailsInformation.appendChild(bookTitle);
+commonFields.forEach((field) => {
+    bookDetailsInformation.appendChild(field);
+});
 bookDetailsInformation.appendChild(bookImage);
-bookDetailsInformation.appendChild(authors);
-bookDetailsInformation.appendChild(publisher);
-bookDetailsInformation.appendChild(publishDate);
 bookDetailsInformation.appendChild(numberOfPages);
 let bookDescriptionTitle = document.createElement('h3');
 bookDescriptionTitle.innerHTML = "Book Description";
