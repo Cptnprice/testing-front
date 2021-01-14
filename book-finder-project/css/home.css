@@ -6,6 +6,8 @@
 body {
   background-color: #a9aac9;
   font-family: sans-serif; }
+  body .bold-span {
+    font-weight: bold; }
   body .container h1 {
     text-align: center;
     padding-top: 30px; }
@@ -43,13 +45,46 @@ body {
         padding-left: 5px; }
         body .container .book-list .each-book .book-other-information p {
           font-size: 12px; }
-          body .container .book-list .each-book .book-other-information p .bold-span {
-            font-weight: bold; }
         body .container .book-list .each-book .book-other-information .more-information {
           width: 80px;
           padding: 5px;
           border: none;
           background-color: lightblue;
           cursor: pointer; }
+  body .book-details-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 5%; }
+    body .book-details-container .book-details {
+      width: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: start; }
+      body .book-details-container .book-details .book-details-information {
+        min-height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 5px black; }
+        body .book-details-container .book-details .book-details-information .book-detail-image {
+          width: 130px;
+          height: 190px; }
+        body .book-details-container .book-details .book-details-information p {
+          font-size: 12px;
+          align-self: start; }
+      body .book-details-container .book-details .book-description {
+        min-height: 300px;
+        min-width: 850px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 1px 1px 5px black; }
+        body .book-details-container .book-details .book-description p {
+          margin-top: 5%;
+          max-width: 800px; }
 
 /*# sourceMappingURL=home.css.map */

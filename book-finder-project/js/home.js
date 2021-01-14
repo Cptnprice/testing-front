@@ -1,6 +1,7 @@
 let bookListing = document.getElementById("book-listing");
 let bookCriteria = document.getElementById("book-criteria");
 let bookSearchButton = document.getElementById("book-search");
+let storage = window.localStorage;
 
 bookSearchButton.addEventListener("click", async (e) => {
     e.preventDefault();
@@ -29,6 +30,11 @@ bookSearchButton.addEventListener("click", async (e) => {
         let moreInformationButton = document.createElement('button');
         moreInformationButton.classList.add("more-information");
         moreInformationButton.innerHTML = "More";
+        moreInformationButton.addEventListener("click", () => {
+            console.log(book.volumeInfo);
+            storage.setItem("currentBook", JSON.stringify(book));
+            window.location.href = "detail.html";
+        })
         bookOtherInformation.appendChild(bookTitle);
         bookOtherInformation.appendChild(authors);
         bookOtherInformation.appendChild(publishDate);
@@ -37,5 +43,5 @@ bookSearchButton.addEventListener("click", async (e) => {
         bookContainer.appendChild(bookImage);
         bookContainer.appendChild(bookOtherInformation);
         bookListing.appendChild(bookContainer);
-    })
-})
+    });
+});
