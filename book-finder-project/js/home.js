@@ -1,17 +1,20 @@
-import { createBooks, storage } from "./book.js";
+import { createBooks, localStorage } from "./book.js";
 
 let bookListing = document.getElementById("book-listing");
 let bookCriteria = document.getElementById("book-criteria");
 let bookSearchButton = document.getElementById("book-search");
 let loaderContainer = document.getElementById("loading-process");
 
+let sessionStorage = window.sessionStorage;
+
 bookSearchButton.addEventListener("click", async (e) => {
     e.preventDefault();
     bookListing.innerHTML = "";
+    sessionStorage.setItem("alreadySearched", JSON.stringify(true));
     loaderContainer.style.display = "flex";
     let bookCriteriaValue = bookCriteria.value;
-    if (!storage.getItem("searchValue")) {
-        storage.setItem("searchValue", bookCriteriaValue);
+    if (!localStorage.getItem("searchValue")) {
+        localStorage.setItem("searchValue", bookCriteriaValue);
     }
     let searchQueryPart = bookCriteriaValue.split(' ').join('+');
     createBooks(searchQueryPart);
@@ -19,8 +22,8 @@ bookSearchButton.addEventListener("click", async (e) => {
 
 window.onload = () => {
     let temp = document.referrer.split("/");
-    if (temp[temp.length - 1] == "detail.html") {
-        bookCriteria.value = storage.getItem("searchValue");
+    if (temp[temp.length - 1] == "detail.html" || JSON.parse(sessionStorage.getItem("alreadySearched"))) {
+        bookCriteria.value = localStorage.getItem("searchValue");
         createBooks();
     }
 }

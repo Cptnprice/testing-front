@@ -1,6 +1,6 @@
 import { createCommonFields } from "./book.js";
 
-let storage = window.localStorage;
+let localStorage = window.localStorage;
 let bookInformation = document.getElementById("book-information");
 let previousButton = document.getElementById("previous-button");
 
@@ -9,7 +9,7 @@ previousButton.addEventListener("click", (e) => {
     window.location.href = "index.html";
 })
 
-let book = JSON.parse(storage.getItem("currentBook"));
+let book = JSON.parse(localStorage.getItem("currentBook"));
 let bookDetailsInformation = document.createElement('div');
 let bookDescriptionContainer = document.createElement('div');
 bookDetailsInformation.classList.add("book-details-information");

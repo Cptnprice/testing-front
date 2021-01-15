@@ -1,6 +1,6 @@
 import { getBook } from "./FetchBooks.js";
 
-let storage = window.localStorage;
+let localStorage = window.localStorage;
 
 let bookListing = document.getElementById("book-listing");
 let loaderContainer = document.getElementById("loading-process");
@@ -19,9 +19,9 @@ let createCommonFields = (book) => {
 }
 
 let createBooks = async (searchQueryPart) => {
-    let myJson = searchQueryPart ? await getBook(searchQueryPart) : (JSON.parse(storage.getItem("books")) ? JSON.parse(storage.getItem("books")) : null);
+    let myJson = searchQueryPart ? await getBook(searchQueryPart) : (JSON.parse(localStorage.getItem("books")) ? JSON.parse(localStorage.getItem("books")) : null);
     loaderContainer.style.display = "none";
-    storage.setItem("books", JSON.stringify(myJson));
+    localStorage.setItem("books", JSON.stringify(myJson));
     if (myJson) {
         myJson.items.forEach((book) => {
             let bookContainer = document.createElement('div');
@@ -37,7 +37,7 @@ let createBooks = async (searchQueryPart) => {
             moreInformationButton.innerHTML = "More";
             moreInformationButton.addEventListener("click", () => {
                 console.log(book.volumeInfo);
-                storage.setItem("currentBook", JSON.stringify(book));
+                localStorage.setItem("currentBook", JSON.stringify(book));
                 window.location.href = "detail.html";
             });
             commonFields.forEach((field) => {
@@ -51,4 +51,4 @@ let createBooks = async (searchQueryPart) => {
     }
 }
 
-export { createCommonFields, createBooks, storage };
+export { createCommonFields, createBooks, localStorage };
