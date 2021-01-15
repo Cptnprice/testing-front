@@ -51,4 +51,4 @@ let createBooks = async (searchQueryPart) => {
     }
 }
 
-export { createCommonFields, createBooks };
+export { createCommonFields, createBooks, storage };
