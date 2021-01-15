@@ -3,6 +3,7 @@ import { getBook } from "./FetchBooks.js";
 let storage = window.localStorage;
 
 let bookListing = document.getElementById("book-listing");
+let loaderContainer = document.getElementById("loading-process");
 
 let createCommonFields = (book) => {
     let bookTitle = document.createElement('h3');
@@ -19,6 +20,7 @@ let createCommonFields = (book) => {
 
 let createBooks = async (searchQueryPart) => {
     let myJson = searchQueryPart ? await getBook(searchQueryPart) : (JSON.parse(storage.getItem("books")) ? JSON.parse(storage.getItem("books")) : null);
+    loaderContainer.style.display = "none";
     storage.setItem("books", JSON.stringify(myJson));
     if (myJson) {
         myJson.items.forEach((book) => {
