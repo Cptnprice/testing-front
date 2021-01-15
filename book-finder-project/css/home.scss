@@ -147,6 +147,7 @@ body {
                 align-items: center;
                 justify-content: space-evenly;
                 padding: 15px;
+                margin-right: 5%;
                 background-color: white;
                 box-shadow: 1px 1px 5px black;
 
@@ -163,7 +164,7 @@ body {
 
             .book-description {
                 min-height: 300px;
-                min-width: 850px;
+                // min-width: 850px;
                 display: flex;
                 flex-direction: column;
                 padding: 15px;
@@ -227,6 +228,26 @@ body {
                             font-size: 0.8rem;
                         }
                     }
+                }
+            }
+        }
+
+        .book-details-container {
+            flex-direction: column;
+            align-items: center;
+
+            .back-button {
+                width: 120px;
+                margin-bottom: 5%;
+            }
+
+            .book-details {
+                flex-direction: column;
+                align-items: center;
+
+                .book-details-information {
+                    margin-right: 0%;
+                    margin-bottom: 5%;
                 }
             }
         }

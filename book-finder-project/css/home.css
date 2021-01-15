@@ -101,6 +101,7 @@ body {
         align-items: center;
         justify-content: space-evenly;
         padding: 15px;
+        margin-right: 5%;
         background-color: white;
         box-shadow: 1px 1px 5px black; }
         body .book-details-container .book-details .book-details-information .book-detail-image {
@@ -111,7 +112,6 @@ body {
           align-self: start; }
       body .book-details-container .book-details .book-description {
         min-height: 300px;
-        min-width: 850px;
         display: flex;
         flex-direction: column;
         padding: 15px;
@@ -136,7 +136,19 @@ body {
     body .container .book-list .each-book .book-other-information h3 {
       font-size: 1rem; }
     body .container .book-list .each-book .book-other-information p {
-      font-size: 0.8rem; } }
+      font-size: 0.8rem; }
+  body .book-details-container {
+    flex-direction: column;
+    align-items: center; }
+    body .book-details-container .back-button {
+      width: 120px;
+      margin-bottom: 5%; }
+    body .book-details-container .book-details {
+      flex-direction: column;
+      align-items: center; }
+      body .book-details-container .book-details .book-details-information {
+        margin-right: 0%;
+        margin-bottom: 5%; } }
 @media (max-width: 400px) {
   body .container .search form {
     display: flex;
