@@ -15,5 +15,7 @@ bookSearchButton.addEventListener("click", async (e) => {
 });
 
 window.onload = () => {
-    createBooks();
+    if (document.referrer != "") {
+        createBooks();
+    }
 }
