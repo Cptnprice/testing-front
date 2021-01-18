@@ -6,7 +6,7 @@ let bookListing = document.getElementById("book-listing");
 let loaderContainer = document.getElementById("loading-process");
 
 let getBookFromLocalStorage = async () => {
-    return JSON.parse(localStorage.getItem("books");
+    return JSON.parse(localStorage.getItem("books"));
 }
 
 let createCommonFields = (book) => {
@@ -24,7 +24,7 @@ let createCommonFields = (book) => {
 
 let createBooks = async (searchQueryPart) => {
     let booksFromLocalStorage = await getBookFromLocalStorage();
-    let myJson = searchQueryPart ? await getBook(searchQueryPart) : booksFromLocalStorage ? booksFromLocalStorage : null);
+    let myJson = searchQueryPart ? await getBook(searchQueryPart) : (booksFromLocalStorage ? booksFromLocalStorage : null);
     loaderContainer.style.display = "none";
     localStorage.setItem("books", JSON.stringify(myJson));
     if (myJson) {
