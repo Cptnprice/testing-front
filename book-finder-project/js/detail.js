@@ -8,7 +8,6 @@ let loaderContainer = document.getElementById("loading-process");
 previousButton.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "index.html";
-    loaderContainer.style.display = "flex";
 })
 
 let getCurrentBook = async () => {
