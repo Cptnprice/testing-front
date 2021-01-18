@@ -11,8 +11,11 @@
         <h1>Book finder</h1>
         <div class="search">
             <form>
-                <input type="text" id="book-criteria" name="criteria" placeholder="enter book title, author name">
+                <input type="text" id="book-criteria" class="book-search-criteria" name="criteria" placeholder="enter book title, author name">
                 <button type="submit" class="search-button" id="book-search">Search</button>
+                <div id="error-message" class="error">
+                    <p>This field is required</p>
+                </div>
             </form>
         </div>
         <div class="loader-container" id="loading-process">

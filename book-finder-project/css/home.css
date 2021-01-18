@@ -26,7 +26,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 15px; }
-    body .container .search form input[type="text"] {
+    body .container .search form .book-search-criteria {
       padding: 15px;
       border: none; }
     body .container .search form button {
@@ -38,6 +38,13 @@ body {
       body .container .search form button:hover {
         background-color: white;
         color: #8c9d2d; }
+    body .container .search form .error {
+      display: none;
+      padding: 5px 0px; }
+      body .container .search form .error p {
+        color: red; }
+    body .container .search form .error-input-border {
+      border: 1px solid red; }
   body .container .book-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 500px));

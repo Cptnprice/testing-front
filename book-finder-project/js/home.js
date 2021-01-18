@@ -4,20 +4,31 @@ let bookListing = document.getElementById("book-listing");
 let bookCriteria = document.getElementById("book-criteria");
 let bookSearchButton = document.getElementById("book-search");
 let loaderContainer = document.getElementById("loading-process");
+let errorMessageContainer = document.getElementById("error-message");
 
 let sessionStorage = window.sessionStorage;
 
 bookSearchButton.addEventListener("click", async (e) => {
     e.preventDefault();
-    bookListing.innerHTML = "";
-    sessionStorage.setItem("alreadySearched", JSON.stringify(true));
-    loaderContainer.style.display = "flex";
     let bookCriteriaValue = bookCriteria.value;
-    if (!localStorage.getItem("searchValue")) {
-        localStorage.setItem("searchValue", bookCriteriaValue);
+    if (!bookCriteriaValue) {
+        bookCriteria.classList.add("error-input-border");
+        errorMessageContainer.style.display = "block";
     }
-    let searchQueryPart = bookCriteriaValue.split(' ').join('+');
-    createBooks(searchQueryPart);
+    else {
+        if (errorMessageContainer.style.display != "none") {
+            bookCriteria.classList.remove("error-input-border");
+            errorMessageContainer.style.display = "none";
+        }
+        bookListing.innerHTML = "";
+        sessionStorage.setItem("alreadySearched", JSON.stringify(true));
+        loaderContainer.style.display = "flex";
+        if (!localStorage.getItem("searchValue")) {
+            localStorage.setItem("searchValue", bookCriteriaValue);
+        }
+        let searchQueryPart = bookCriteriaValue.split(' ').join('+');
+        createBooks(searchQueryPart);
+    }
 });
 
 window.onload = () => {
