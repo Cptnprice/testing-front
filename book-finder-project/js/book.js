@@ -44,6 +44,8 @@ let createBooks = async (searchQueryPart) => {
                 console.log(book.volumeInfo);
                 localStorage.setItem("currentBook", JSON.stringify(book));
                 window.location.href = "detail.html";
+                loaderContainer.style.display = "flex";
+                console.log("set loader for details page");
             });
             commonFields.forEach((field) => {
                 bookOtherInformation.appendChild(field);
