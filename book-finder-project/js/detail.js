@@ -3,13 +3,20 @@ import { createCommonFields } from "./book.js";
 let localStorage = window.localStorage;
 let bookInformation = document.getElementById("book-information");
 let previousButton = document.getElementById("previous-button");
+let loaderContainer = document.getElementById("loading-process");
 
 previousButton.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "index.html";
 })
 
-let book = JSON.parse(localStorage.getItem("currentBook"));
+let getCurrentBook = async () => {
+    return JSON.parse(localStorage.getItem("currentBook"));
+}
+
+loaderContainer.style.display = "flex";
+let book = await getCurrentBook();
+loaderContainer.style.display = "none";
 let bookDetailsInformation = document.createElement('div');
 let bookDescriptionContainer = document.createElement('div');
 bookDetailsInformation.classList.add("book-details-information");
