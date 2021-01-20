@@ -8,14 +8,20 @@ body {
   body .container {
     position: relative;
     height: 100%; }
-    body .container .first {
+    body .container .test {
       width: 200px;
       height: 200px;
-      background-color: lightblue;
       position: absolute;
-      top: 472px;
-      left: 643px;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
       cursor: pointer; }
+    body .container .first {
+      background-color: lightblue; }
+    body .container .second {
+      background-color: lightcoral;
+      top: 20%;
+      left: 20%;
+      transform: translate(-20%, -20%); }
 
 /*# sourceMappingURL=home.css.map */

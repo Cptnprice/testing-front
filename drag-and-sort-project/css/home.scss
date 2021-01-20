@@ -11,15 +11,25 @@ body {
         position: relative;
         height: 100%;
 
-        .first {
+        .test {
             width: 200px;
             height: 200px;
-            background-color: lightblue;
             position: absolute;
-            top: 472px;
-            left: 643px;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
             cursor: pointer;
+        }
+
+        .first {
+            background-color: lightblue;
+        }
+
+        .second {
+            background-color: lightcoral;
+            top: 20%;
+            left: 20%;
+            transform: translate(-20%, -20%);
         }
     }
 }
