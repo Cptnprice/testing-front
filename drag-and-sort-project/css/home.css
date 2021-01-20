@@ -1,3 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
+body {
+  height: 100vh; }
+  body .container {
+    position: relative;
+    height: 100%; }
+    body .container .first {
+      width: 200px;
+      height: 200px;
+      background-color: lightblue;
+      position: absolute;
+      top: 472px;
+      left: 643px;
+      transform: translate(-50%, -50%);
+      cursor: pointer; }
 
 /*# sourceMappingURL=home.css.map */
