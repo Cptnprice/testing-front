@@ -4,6 +4,7 @@ let previousY;
 
 let testingFunction = (e1) => {
     firstBox.style.top = firstBox.offsetTop + (e1.clientY - previousY) + "px";
+    firstBox.style.left = firstBox.offsetLeft + (e1.clientX - previousX) + "px";
     previousX = e1.clientX;
     previousY = e1.clientY;
 }
