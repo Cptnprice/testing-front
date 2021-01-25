@@ -20,24 +20,27 @@ function measure(e) {
         setStopwatchStarted();
     }
     testing = words[i].length;
+    temp = document.getElementById(i);
     if (testing2 < testing) {
         if (e.data == words[i][testing2]) {
             if (typedText.value == words[i].substring(0, testing2+1)) {
                 increaseTotalTypedCharacters();
-                temp = document.getElementById(i);
-                if (incorrectTyped) {
-                    temp.innerHTML = temp.innerHTML.replace('class="incorrect-character', 'class="typed-character"');
-                    incorrectTyped = false;
-                }
-                else{
-                    temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
-                }
+                temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
+                incorrectTyped = false;
                 testing2++;
             }
         }
         else {
-            if (!incorrectTyped) {
-                temp = document.getElementById(i);
+            if (!e.data) {
+                if (!incorrectTyped) {
+                    testing2--;
+                }
+                let spanElements = temp.querySelectorAll("span");
+                let lastIndexOfOpenSpan = temp.innerHTML.lastIndexOf("<span ");
+                let lastIndexOfCloseSpan = temp.innerHTML.lastIndexOf("</span>");
+                temp.innerHTML = temp.innerHTML.replace(temp.innerHTML.substr(lastIndexOfOpenSpan, lastIndexOfCloseSpan - lastIndexOfOpenSpan + 7), spanElements[spanElements.length - 1].innerHTML);
+            }
+            else {
                 temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="incorrect-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
                 incorrectTyped = true;
             }
