@@ -33,6 +33,16 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        .loader {
+            width: 50px;
+            height: 50px;
+            margin: 5px auto;
+            border-radius: 50%;
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            border-left-color: lightblue;
+            animation: 0.5s infinite linear loading;
+        }
     }
 
     .completed {
@@ -81,5 +91,15 @@ body {
 @keyframes complete {
     100% {
         opacity: 1;
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
     }
 }

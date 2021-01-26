@@ -13,6 +13,8 @@ let first;
 let typedText;
 let temp;
 
+let loader = document.getElementById("loading-text");
+
 function measure(e) {
     if (!stopwatchStarted) {
         timer();
@@ -77,7 +79,8 @@ getText().then((result) => {
         temp.innerHTML = word;
         temp.id = i;
         textToTypeTest.appendChild(temp);
-    })
+    });
+    loader.style.display = "none";
     typedWords = 0;
     testing = words[i].length;
     first = document.getElementById(i);
