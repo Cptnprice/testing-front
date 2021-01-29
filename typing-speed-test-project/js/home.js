@@ -8,6 +8,7 @@ let typedWords;
 let i = 0;
 let testing;
 let testing2 = 0;
+let testing3 = 0;
 let incorrectTyped = false;
 let first;
 let typedText;
@@ -41,9 +42,11 @@ function measure(e) {
                 testing2--;
             }
             else {
-                temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="incorrect-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
-                incorrectTyped = true;
-                testing2++;
+                if (testing3 < testing) {
+                    temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="incorrect-character">${words[i][testing3]}</span>` + words[i].substring(testing3+1);
+                    incorrectTyped = true;
+                    testing3++;
+                }
             }
         }
     }
@@ -62,6 +65,7 @@ function measure(e) {
             i++;
             document.getElementById(i).classList.add("underline-word");
             testing2 = 0;
+            testing3 = 0;
             typedText.value = "";
             incorrectTyped = false;
         }
