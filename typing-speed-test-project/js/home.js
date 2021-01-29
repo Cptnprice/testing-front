@@ -31,15 +31,19 @@ function measure(e) {
                 temp.innerHTML = temp.innerHTML.substring(0, temp.innerHTML.includes("</span>") ? (temp.innerHTML.lastIndexOf("</span>")+7) : -1) + `<span class="typed-character">${words[i][testing2]}</span>` + words[i].substring(testing2+1);
                 incorrectTyped = false;
                 testing2++;
+                testing3++;
             }
         }
         else {
-            if (!e.data) {
+            if (!e.data && typedText.value.length < words[i].length) {
                 let spanElements = temp.querySelectorAll("span");
                 let lastIndexOfOpenSpan = temp.innerHTML.lastIndexOf("<span ");
                 let lastIndexOfCloseSpan = temp.innerHTML.lastIndexOf("</span>");
                 temp.innerHTML = temp.innerHTML.substring(0, lastIndexOfOpenSpan) + spanElements[spanElements.length - 1].innerHTML + temp.innerHTML.substring(lastIndexOfCloseSpan+7, temp.innerHTML.length);
-                testing2--;
+                if (testing2 >= 1) {
+                    testing2--;
+                }
+                testing3--;
             }
             else {
                 if (testing3 < testing) {
