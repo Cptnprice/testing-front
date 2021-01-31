@@ -40,7 +40,7 @@ function measure(e) {
                 let lastIndexOfOpenSpan = temp.innerHTML.lastIndexOf("<span ");
                 let lastIndexOfCloseSpan = temp.innerHTML.lastIndexOf("</span>");
                 temp.innerHTML = temp.innerHTML.substring(0, lastIndexOfOpenSpan) + spanElements[spanElements.length - 1].innerHTML + temp.innerHTML.substring(lastIndexOfCloseSpan+7, temp.innerHTML.length);
-                if (testing2 >= 1) {
+                if (testing2 >= 1 && !incorrectTyped) {
                     testing2--;
                 }
                 testing3--;

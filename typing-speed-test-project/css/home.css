@@ -1,69 +1,89 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
-  height: 100vh; }
-  body .typing-speed {
-    padding-top: 15px;
-    padding-left: 15px; }
-  body .testing {
-    width: 40%;
-    padding: 15px;
-    background-color: lightblue;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    opacity: 0; }
-    body .testing a {
-      color: black; }
-  body .container {
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    body .container .loader {
-      width: 50px;
-      height: 50px;
-      margin: 5px auto;
-      border-radius: 50%;
-      border: 5px solid rgba(0, 0, 0, 0.1);
-      border-left-color: lightblue;
-      animation: 0.5s infinite linear loading; }
-  body .completed {
-    animation: 1s forwards complete; }
-  body .text-to-type {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid lightgray; }
-    body .text-to-type p {
-      display: inline;
-      padding-right: 5px;
-      word-break: break-all; }
-      body .text-to-type p:last-child::after {
-        content: "."; }
-  body input {
-    width: 100%;
-    padding: 15px;
-    margin-top: 15px; }
-  body .typed-character {
-    color: green;
-    text-decoration: inherit; }
-  body .underline-word {
-    text-decoration: underline; }
-  body .incorrect-character {
-    color: red; }
+  height: 100vh;
+}
+body .typing-speed {
+  padding-top: 15px;
+  padding-left: 15px;
+}
+body .testing {
+  width: 40%;
+  padding: 15px;
+  background-color: lightblue;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  opacity: 0;
+}
+body .testing a {
+  color: black;
+}
+body .container {
+  width: 40%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .container .loader {
+  width: 50px;
+  height: 50px;
+  margin: 5px auto;
+  border-radius: 50%;
+  border: 5px solid rgba(0, 0, 0, 0.1);
+  border-left-color: lightblue;
+  animation: 0.5s infinite linear loading;
+}
+body .completed {
+  animation: 1s forwards complete;
+}
+body .text-to-type {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid lightgray;
+}
+body .text-to-type p {
+  display: inline;
+  padding-right: 5px;
+  word-break: break-all;
+}
+body .text-to-type p:last-child::after {
+  content: ".";
+}
+body input {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+}
+body .typed-character {
+  color: green;
+  text-decoration: inherit;
+}
+body .underline-word {
+  text-decoration: underline;
+}
+body .incorrect-character {
+  color: red;
+}
 
 @keyframes complete {
   100% {
-    opacity: 1; } }
+    opacity: 1;
+  }
+}
 @keyframes loading {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+  }
+}
 
 /*# sourceMappingURL=home.css.map */
