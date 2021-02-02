@@ -98,7 +98,6 @@ body {
     body .book-details-container .book-details {
       width: 70%;
       display: flex;
-      justify-content: space-between;
       align-items: start; }
       body .book-details-container .book-details .book-details-information {
         max-width: 355px;
