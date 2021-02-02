@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #a9aac9;
+    background-color: #d8dfeb;
     font-family: sans-serif;
 
     .bold-span {
@@ -21,7 +21,7 @@ body {
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            border: 5px solid #a9aac9;
+            border: 5px solid #d8dfeb;
             border-left-color: white;
             animation: loading 1s linear infinite;
         }
@@ -136,13 +136,13 @@ body {
             height: max-content;
             padding: 15px;
             border: none;
-            background-color: #dae1e7;
+            background-color: #aab8d4;
+            color: white;
             cursor: pointer;
             transition: all 0.3s;
 
             &:hover {
                 background-color: #3e27d8;
-                color: white;
             }
         }
 

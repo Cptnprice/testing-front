@@ -8,7 +8,7 @@ let loaderContainer = document.getElementById("loading-process");
 previousButton.addEventListener("click", (e) => {
     e.preventDefault();
     window.location.href = "index.html";
-})
+});
 
 let getCurrentBook = async () => {
     return JSON.parse(localStorage.getItem("currentBook"));
