@@ -11,7 +11,7 @@ let testing2 = 0;
 let testing3 = 0;
 let incorrectTyped = false;
 let first;
-let typedText;
+let typedText = document.getElementById("typed-text");;
 let temp;
 
 let loader = document.getElementById("loading-text");
@@ -92,7 +92,9 @@ getText().then((result) => {
     first = document.getElementById(i);
     first.classList.add("underline-word");
 
-    typedText = document.getElementById("typed-text");
-
     typedText.addEventListener("input", measure)
-})
+});
+
+window.onload = () => {
+    typedText.value = "";
+}
