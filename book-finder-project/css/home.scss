@@ -44,6 +44,10 @@ body {
                 .book-search-criteria {
                     padding: 15px;
                     border: none;
+
+                    &:focus {
+                        outline: 1px solid blue;
+                    }
                 }
 
                 button {

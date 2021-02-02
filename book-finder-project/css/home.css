@@ -29,6 +29,8 @@ body {
     body .container .search form .book-search-criteria {
       padding: 15px;
       border: none; }
+      body .container .search form .book-search-criteria:focus {
+        outline: 1px solid blue; }
     body .container .search form button {
       padding: 15px;
       border: none;
