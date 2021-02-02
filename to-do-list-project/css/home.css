@@ -7,7 +7,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
-  background-color: #7d8fb5;
+  background-color: #c1c6df;
   font-family: sans-serif; }
   body .container {
     min-width: 440px;
@@ -30,11 +30,15 @@ body {
         body .container .add-filter form .title {
           padding: 15px;
           border: none; }
+          body .container .add-filter form .title:focus {
+            outline: 1px solid blue; }
         body .container .add-filter form .to-do-submit {
           border: none;
           background-color: transparent;
           font-size: 2rem;
           cursor: pointer; }
+          body .container .add-filter form .to-do-submit:hover {
+            opacity: 0.7; }
         body .container .add-filter form .select-container {
           position: relative;
           height: 100%;
@@ -43,7 +47,8 @@ body {
             height: 100%;
             width: 100%;
             appearance: none;
-            border: none; }
+            border: none;
+            cursor: pointer; }
           body .container .add-filter form .select-container::after {
             content: "\25BC";
             position: absolute;
@@ -80,5 +85,23 @@ body {
           opacity: 0.5; }
           body .container .to-do-list ul .completed li {
             text-decoration: line-through; }
+
+@media (max-width: 500px) {
+  body .container {
+    width: 80%;
+    min-width: unset; }
+    body .container .add-filter form {
+      flex-direction: column; }
+      body .container .add-filter form .select-container {
+        width: 70%;
+        min-height: 40px;
+        order: 1; }
+      body .container .add-filter form .title {
+        width: 70%;
+        margin-top: 5px;
+        order: 2; }
+      body .container .add-filter form .to-do-submit {
+        margin-top: 5px;
+        order: 3; } }
 
 /*# sourceMappingURL=home.css.map */

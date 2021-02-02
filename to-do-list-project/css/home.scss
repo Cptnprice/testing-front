@@ -8,7 +8,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #7d8fb5;
+    background-color: #c1c6df;
     font-family: sans-serif;
 
     .container {
@@ -37,6 +37,10 @@ body {
                 .title {
                     padding: 15px;
                     border: none;
+
+                    &:focus {
+                        outline: 1px solid blue;
+                    }
                 }
 
                 .to-do-submit {
@@ -44,6 +48,10 @@ body {
                     background-color: transparent;
                     font-size: 2rem;
                     cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
                 }
 
                 .select-container {
@@ -56,6 +64,7 @@ body {
                         width: 100%;
                         appearance: none;
                         border: none;
+                        cursor: pointer;
                     }
     
                     &::after {
@@ -115,6 +124,40 @@ body {
 
                     li {
                         text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    body {
+
+        .container {
+            width: 80%;
+            min-width: unset;
+
+            .add-filter {
+
+                form {
+                    flex-direction: column;
+
+                    .select-container {
+                        width: 70%;
+                        min-height: 40px;
+                        order: 1;
+                    }
+
+                    .title {
+                        width: 70%;
+                        margin-top: 5px;
+                        order: 2;
+                    }
+
+                    .to-do-submit {
+                        margin-top: 5px;
+                        order: 3;
                     }
                 }
             }
