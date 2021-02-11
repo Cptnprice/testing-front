@@ -1,173 +1,230 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   background-color: #d8dfeb;
-  font-family: sans-serif; }
-  body .bold-span {
-    font-weight: bold; }
-  body .loader-container {
-    display: none;
-    justify-content: center;
-    margin-top: 15px; }
-    body .loader-container .loader {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: 5px solid #d8dfeb;
-      border-left-color: white;
-      animation: loading 1s linear infinite; }
-  body .container h1 {
-    text-align: center;
-    padding-top: 30px; }
-  body .container .search {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px; }
-    body .container .search form .book-search-criteria {
-      padding: 15px;
-      border: none; }
-      body .container .search form .book-search-criteria:focus {
-        outline: 1px solid blue; }
-    body .container .search form button {
-      padding: 15px;
-      border: none;
-      background-color: #c9dd39;
-      cursor: pointer;
-      transition: all 0.3s; }
-      body .container .search form button:hover {
-        background-color: white;
-        color: #8c9d2d; }
-    body .container .search form .error {
-      display: none;
-      padding: 5px 0px; }
-      body .container .search form .error p {
-        color: red; }
-    body .container .search form .error-input-border {
-      border: 1px solid red; }
-  body .container .book-list {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 500px));
-    justify-content: center;
-    grid-gap: 50px 50px;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding: 15px; }
-    body .container .book-list .each-book {
-      max-width: 500px;
-      min-height: 200px;
-      display: flex;
-      background-color: white;
-      box-shadow: 1px 1px 5px black; }
-      body .container .book-list .each-book img {
-        max-width: 25%;
-        height: auto; }
-      body .container .book-list .each-book .book-other-information {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        padding-left: 5px; }
-        body .container .book-list .each-book .book-other-information h3 {
-          font-size: 1rem; }
-        body .container .book-list .each-book .book-other-information p {
-          font-size: 0.8rem; }
-        body .container .book-list .each-book .book-other-information .more-information {
-          width: 80px;
-          padding: 5px;
-          border: none;
-          background-color: lightblue;
-          cursor: pointer;
-          transition: all 0.3s; }
-          body .container .book-list .each-book .book-other-information .more-information:hover {
-            background-color: #5031ce;
-            color: white; }
-  body .book-details-container {
-    display: flex;
-    justify-content: space-evenly;
-    padding-top: 5%; }
-    body .book-details-container .back-button {
-      height: max-content;
-      padding: 15px;
-      border: none;
-      background-color: #aab8d4;
-      color: white;
-      cursor: pointer;
-      transition: all 0.3s; }
-      body .book-details-container .back-button:hover {
-        background-color: #3e27d8; }
-    body .book-details-container .book-details {
-      width: 70%;
-      display: flex;
-      align-items: start; }
-      body .book-details-container .book-details .book-details-information {
-        max-width: 355px;
-        min-height: 400px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 15px;
-        margin-right: 5%;
-        background-color: white;
-        box-shadow: 1px 1px 5px black; }
-        body .book-details-container .book-details .book-details-information .book-detail-image {
-          width: 130px;
-          height: 190px; }
-        body .book-details-container .book-details .book-details-information p {
-          font-size: 12px;
-          align-self: start; }
-      body .book-details-container .book-details .book-description {
-        min-height: 300px;
-        display: flex;
-        flex-direction: column;
-        padding: 15px;
-        background-color: white;
-        box-shadow: 1px 1px 5px black; }
-        body .book-details-container .book-details .book-description p {
-          margin-top: 5%;
-          max-width: 800px; }
+  font-family: sans-serif;
+}
+body .bold-span {
+  font-weight: bold;
+}
+body .loader-container {
+  display: none;
+  justify-content: center;
+  margin-top: 15px;
+}
+body .loader-container .loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #d8dfeb;
+  border-left-color: white;
+  animation: loading 1s linear infinite;
+}
+body .container a {
+  text-decoration: none;
+}
+body .container a h1 {
+  text-align: center;
+  padding-top: 30px;
+  color: black;
+}
+body .container a h1 i {
+  margin-right: 5px;
+  color: white;
+}
+body .container .search {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+body .container .search form .book-search-criteria {
+  padding: 15px;
+  border: none;
+}
+body .container .search form .book-search-criteria:focus {
+  outline: 1px solid blue;
+}
+body .container .search form button {
+  padding: 15px;
+  border: none;
+  background-color: #c9dd39;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body .container .search form button:hover {
+  background-color: white;
+  color: #8c9d2d;
+}
+body .container .search form .error {
+  display: none;
+  padding: 5px 0px;
+}
+body .container .search form .error p {
+  color: red;
+}
+body .container .search form .error-input-border {
+  border: 1px solid red;
+}
+body .container .book-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 500px));
+  justify-content: center;
+  grid-gap: 50px 50px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding: 15px;
+}
+body .container .book-list .each-book {
+  max-width: 500px;
+  min-height: 200px;
+  display: flex;
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+}
+body .container .book-list .each-book img {
+  max-width: 25%;
+  height: auto;
+}
+body .container .book-list .each-book .book-other-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 5px;
+}
+body .container .book-list .each-book .book-other-information h3 {
+  font-size: 1rem;
+}
+body .container .book-list .each-book .book-other-information p {
+  font-size: 0.8rem;
+}
+body .container .book-list .each-book .book-other-information .more-information {
+  width: 80px;
+  padding: 5px;
+  border: none;
+  background-color: lightblue;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body .container .book-list .each-book .book-other-information .more-information:hover {
+  background-color: #5031ce;
+  color: white;
+}
+body .book-details-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5%;
+}
+body .book-details-container .back-button {
+  height: max-content;
+  padding: 15px;
+  border: none;
+  background-color: #aab8d4;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body .book-details-container .back-button:hover {
+  background-color: #3e27d8;
+}
+body .book-details-container .book-details {
+  width: 70%;
+  display: flex;
+  align-items: start;
+}
+body .book-details-container .book-details .book-details-information {
+  max-width: 355px;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 15px;
+  margin-right: 5%;
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+}
+body .book-details-container .book-details .book-details-information .book-detail-image {
+  width: 130px;
+  height: 190px;
+}
+body .book-details-container .book-details .book-details-information p {
+  font-size: 12px;
+  align-self: start;
+}
+body .book-details-container .book-details .book-description {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  box-shadow: 1px 1px 5px black;
+}
+body .book-details-container .book-details .book-description p {
+  margin-top: 5%;
+  max-width: 800px;
+}
 
 @media (max-width: 1030px) {
   body .container .book-list {
     grid-template-columns: repeat(2, minmax(200px, 400px));
-    grid-gap: 25px 25px; }
-    body .container .book-list .each-book .book-other-information h3 {
-      font-size: 0.8rem; }
-    body .container .book-list .each-book .book-other-information p {
-      font-size: 0.7rem; } }
+    grid-gap: 25px 25px;
+  }
+  body .container .book-list .each-book .book-other-information h3 {
+    font-size: 0.8rem;
+  }
+  body .container .book-list .each-book .book-other-information p {
+    font-size: 0.7rem;
+  }
+}
 @media (max-width: 790px) {
   body .container .book-list {
     grid-template-columns: repeat(1, minmax(200px, auto));
-    grid-gap: 30px 0px; }
-    body .container .book-list .each-book .book-other-information h3 {
-      font-size: 1rem; }
-    body .container .book-list .each-book .book-other-information p {
-      font-size: 0.8rem; }
+    grid-gap: 30px 0px;
+  }
+  body .container .book-list .each-book .book-other-information h3 {
+    font-size: 1rem;
+  }
+  body .container .book-list .each-book .book-other-information p {
+    font-size: 0.8rem;
+  }
   body .book-details-container {
     flex-direction: column;
-    align-items: center; }
-    body .book-details-container .back-button {
-      width: 120px;
-      margin-bottom: 5%; }
-    body .book-details-container .book-details {
-      flex-direction: column;
-      align-items: center; }
-      body .book-details-container .book-details .book-details-information {
-        margin-right: 0%;
-        margin-bottom: 5%; } }
+    align-items: center;
+  }
+  body .book-details-container .back-button {
+    width: 120px;
+    margin-bottom: 5%;
+  }
+  body .book-details-container .book-details {
+    flex-direction: column;
+    align-items: center;
+  }
+  body .book-details-container .book-details .book-details-information {
+    margin-right: 0%;
+    margin-bottom: 5%;
+  }
+}
 @media (max-width: 400px) {
   body .container .search form {
     display: flex;
     flex-direction: column;
-    align-items: center; }
-    body .container .search form button {
-      margin-top: 5%; } }
+    align-items: center;
+  }
+  body .container .search form button {
+    margin-top: 5%;
+  }
+}
 @keyframes loading {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(0deg);
+  }
   100% {
-    transform: rotate(360deg); } }
+    transform: rotate(360deg);
+  }
+}
 
 /*# sourceMappingURL=home.css.map */

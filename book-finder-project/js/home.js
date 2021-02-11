@@ -32,8 +32,8 @@ bookSearchButton.addEventListener("click", async (e) => {
 });
 
 window.onload = () => {
-    let temp = document.referrer.split("/");
-    if (temp[temp.length - 1] == "detail.html" || JSON.parse(sessionStorage.getItem("alreadySearched"))) {
+    let referrer = document.referrer.split("/");
+    if (referrer[referrer.length - 1] == "detail.html" || JSON.parse(sessionStorage.getItem("alreadySearched"))) {
         bookCriteria.value = localStorage.getItem("searchValue");
         loaderContainer.style.display = "flex";
         createBooks();
