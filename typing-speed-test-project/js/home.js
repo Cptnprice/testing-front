@@ -40,14 +40,21 @@ function measure(e) {
         else {
             // backspace(deleting character)
             if (!e.data && typedText.value.length < words[currentWordIndex].length) {
-                let spanElements = typedWord.querySelectorAll("span");
-                let lastIndexOfOpenSpan = typedWord.innerHTML.lastIndexOf("<span ");
-                let lastIndexOfCloseSpan = typedWord.innerHTML.lastIndexOf("</span>");
-                typedWord.innerHTML = typedWord.innerHTML.substring(0, lastIndexOfOpenSpan) + spanElements[spanElements.length - 1].innerHTML + typedWord.innerHTML.substring(lastIndexOfCloseSpan+7, typedWord.innerHTML.length);
-                if (correctCharactersQuantity >= 1 && !incorrectTyped) {
-                    correctCharactersQuantity--;
+                if (!typedText.value) {
+                    typedWord.innerHTML = words[currentWordIndex];
+                    correctCharactersQuantity = 0;
+                    totalCharactersQuantity = 0;
                 }
-                totalCharactersQuantity--;
+                else {
+                    let spanElements = typedWord.querySelectorAll("span");
+                    let lastIndexOfOpenSpan = typedWord.innerHTML.lastIndexOf("<span ");
+                    let lastIndexOfCloseSpan = typedWord.innerHTML.lastIndexOf("</span>");
+                    typedWord.innerHTML = typedWord.innerHTML.substring(0, lastIndexOfOpenSpan) + spanElements[spanElements.length - 1].innerHTML + typedWord.innerHTML.substring(lastIndexOfCloseSpan+7, typedWord.innerHTML.length);
+                    if (correctCharactersQuantity >= 1 && !incorrectTyped) {
+                        correctCharactersQuantity--;
+                    }
+                    totalCharactersQuantity--;
+                }
             }
             // typed character is incorrect
             else {
