@@ -1,5 +1,100 @@
-body {
+* {
     margin: 0;
-    padding: 60px 130px;
     box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 60px 130px;
+    background-color: #F6F6F6;
+
+    header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .company-name {
+            font-family: 'Mulish', sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 25px;
+            color: #332D76;
+            cursor: pointer;
+        }
+
+        .search input {
+            padding: 10px;
+            border: none;
+            border-radius: 25px;
+            box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-profile {
+            display: flex;
+
+            &__messages {
+                width: 45px;
+                height: 45px;
+                position: relative;
+                background-color: white;
+                box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+                border-radius: 50%;
+            }
+
+            &__messages-quantity {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: 0px;
+                border-radius: 50%;
+                background-color: #6A63E5;
+
+                p {
+                    font-family: 'Mulish', sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 9px;
+                    line-height: 11px;
+                    color: white;
+                }
+            }
+
+            &__messages-icon {
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &__user {
+                display: flex;
+                margin-left: 45px;
+
+                p {
+                    margin-top: 5px;
+                    margin-left: 15px;
+                    font-family: 'Mulish', sans-serif;
+                    font-style: normal;
+                    font-weight: bold;
+                    font-size: 16px;
+                    line-height: 20px;
+
+                    small {
+                        display: block;
+                        font-weight: 600;
+                        font-size: 10px;
+                        line-height: 13px;
+                        color: #828282;
+                    }
+                }
+            }
+        }
+    }
 }
