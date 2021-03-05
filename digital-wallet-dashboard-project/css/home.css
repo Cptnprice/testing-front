@@ -13,6 +13,7 @@ body header {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 body header .company-name {
   font-family: "Mulish", sans-serif;
@@ -86,6 +87,27 @@ body header .user-profile__user p small {
   font-size: 10px;
   line-height: 13px;
   color: #828282;
+}
+body nav {
+  width: max-content;
+}
+body nav .navigation-list {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 130px;
+}
+body nav .navigation-list__item {
+  margin: 50px 0px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body nav .navigation-list__item--active {
+  padding: 15px 15px;
+  margin-bottom: 50px;
+  border-radius: 50%;
+  background-color: #6E60DF;
 }
 
 /*# sourceMappingURL=home.css.map */
