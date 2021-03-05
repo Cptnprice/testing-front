@@ -88,26 +88,39 @@ body header .user-profile__user p small {
   line-height: 13px;
   color: #828282;
 }
-body nav {
+body main {
+  display: flex;
+}
+body main nav {
   width: max-content;
 }
-body nav .navigation-list {
+body main nav .navigation-list {
   list-style-type: none;
   padding-left: 20px;
   margin-top: 130px;
 }
-body nav .navigation-list__item {
+body main nav .navigation-list__item {
   margin: 50px 0px;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-body nav .navigation-list__item--active {
+body main nav .navigation-list__item--active {
   padding: 15px 15px;
   margin-bottom: 50px;
   border-radius: 50%;
   background-color: #6E60DF;
+}
+body main .main-left__top {
+  display: flex;
+}
+body main .main-left__top h3 {
+  font-family: "Mulish", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 50px;
 }
 
 /*# sourceMappingURL=home.css.map */
