@@ -92,7 +92,13 @@ function saveToDo(newTitle) {
 submitButton.addEventListener("click", (e) => {
     e.preventDefault();
     let newTitle = titleInput.value;
-    saveToDo(newTitle);
+    if (!newTitle) {
+        titleInput.classList.add("title-error");
+    }
+    else {
+        titleInput.classList.remove("title-error");
+        saveToDo(newTitle);
+    }
 })
 
 filterNotes.addEventListener("change", (e) => {

@@ -1,107 +1,140 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 body {
   height: 100vh;
   display: flex;
   justify-content: center;
   background-color: #c1c6df;
-  font-family: sans-serif; }
-  body .container {
-    min-width: 440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 5%; }
-    body .container h1 {
-      font-size: 3rem;
-      color: white; }
-    body .container .add-filter {
-      margin-top: 30%;
-      width: 100%;
-      display: flex; }
-      body .container .add-filter form {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center; }
-        body .container .add-filter form .title {
-          padding: 15px;
-          border: none; }
-          body .container .add-filter form .title:focus {
-            outline: 1px solid blue; }
-        body .container .add-filter form .to-do-submit {
-          border: none;
-          background-color: transparent;
-          font-size: 2rem;
-          cursor: pointer; }
-          body .container .add-filter form .to-do-submit:hover {
-            opacity: 0.7; }
-        body .container .add-filter form .select-container {
-          position: relative;
-          height: 100%;
-          width: 30%; }
-          body .container .add-filter form .select-container select {
-            height: 100%;
-            width: 100%;
-            appearance: none;
-            border: none;
-            cursor: pointer; }
-          body .container .add-filter form .select-container::after {
-            content: "\25BC";
-            position: absolute;
-            top: 50%;
-            right: 5px;
-            transform: translateY(-50%);
-            color: #a7bb44;
-            pointer-events: none; }
-    body .container .to-do-list {
-      width: 100%;
-      margin-top: 5%; }
-      body .container .to-do-list ul {
-        list-style-type: none; }
-        body .container .to-do-list ul .each-to-do {
-          display: flex;
-          align-items: center;
-          padding: 15px 5px 15px 15px;
-          margin-top: 5%;
-          background-color: white; }
-          body .container .to-do-list ul .each-to-do li {
-            flex: 1; }
-          body .container .to-do-list ul .each-to-do button {
-            border: none;
-            background-color: transparent;
-            font-size: 1.5rem;
-            cursor: pointer; }
-          body .container .to-do-list ul .each-to-do .check-to-do {
-            margin-right: 5%; }
-            body .container .to-do-list ul .each-to-do .check-to-do:hover {
-              color: green; }
-          body .container .to-do-list ul .each-to-do .delete-to-do:hover {
-            color: red; }
-        body .container .to-do-list ul .completed {
-          opacity: 0.5; }
-          body .container .to-do-list ul .completed li {
-            text-decoration: line-through; }
+  font-family: sans-serif;
+}
+body .container {
+  min-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5%;
+}
+body .container h1 {
+  font-size: 3rem;
+  color: white;
+}
+body .container .add-filter {
+  margin-top: 30%;
+  width: 100%;
+  display: flex;
+}
+body .container .add-filter form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .container .add-filter form .title {
+  padding: 15px;
+  border: none;
+}
+body .container .add-filter form .title:focus {
+  outline: 1px solid blue;
+}
+body .container .add-filter form .title-error {
+  outline: 1px solid red;
+}
+body .container .add-filter form .to-do-submit {
+  border: none;
+  background-color: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+}
+body .container .add-filter form .to-do-submit:hover {
+  opacity: 0.7;
+}
+body .container .add-filter form .select-container {
+  position: relative;
+  height: 100%;
+  width: 30%;
+}
+body .container .add-filter form .select-container select {
+  height: 100%;
+  width: 100%;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+body .container .add-filter form .select-container::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  color: #a7bb44;
+  pointer-events: none;
+}
+body .container .to-do-list {
+  width: 100%;
+  margin-top: 5%;
+}
+body .container .to-do-list ul {
+  list-style-type: none;
+}
+body .container .to-do-list ul .each-to-do {
+  display: flex;
+  align-items: center;
+  padding: 15px 5px 15px 15px;
+  margin-top: 5%;
+  background-color: white;
+}
+body .container .to-do-list ul .each-to-do li {
+  flex: 1;
+}
+body .container .to-do-list ul .each-to-do button {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+body .container .to-do-list ul .each-to-do .check-to-do {
+  margin-right: 5%;
+}
+body .container .to-do-list ul .each-to-do .check-to-do:hover {
+  color: green;
+}
+body .container .to-do-list ul .each-to-do .delete-to-do:hover {
+  color: red;
+}
+body .container .to-do-list ul .completed {
+  opacity: 0.5;
+}
+body .container .to-do-list ul .completed li {
+  text-decoration: line-through;
+}
 
 @media (max-width: 500px) {
   body .container {
     width: 80%;
-    min-width: unset; }
-    body .container .add-filter form {
-      flex-direction: column; }
-      body .container .add-filter form .select-container {
-        width: 70%;
-        min-height: 40px;
-        order: 1; }
-      body .container .add-filter form .title {
-        width: 70%;
-        margin-top: 5px;
-        order: 2; }
-      body .container .add-filter form .to-do-submit {
-        margin-top: 5px;
-        order: 3; } }
+    min-width: unset;
+  }
+  body .container .add-filter form {
+    flex-direction: column;
+  }
+  body .container .add-filter form .select-container {
+    width: 70%;
+    min-height: 40px;
+    order: 1;
+  }
+  body .container .add-filter form .title {
+    width: 70%;
+    margin-top: 5px;
+    order: 2;
+  }
+  body .container .add-filter form .to-do-submit {
+    margin-top: 5px;
+    order: 3;
+  }
+}
 
 /*# sourceMappingURL=home.css.map */
